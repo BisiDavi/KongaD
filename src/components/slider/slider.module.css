@@ -1,0 +1,9 @@
+.Carousel {
+  width: 100%;
+}
+
+.Carousel img {
+  cursor: pointer;
+  border-radius: 10px;
+  height: 400px;
+}

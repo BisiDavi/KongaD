@@ -1,0 +1,12 @@
+.KongaCategory {
+  width: 100%;
+  background: #f6f6f6;
+  margin-top: -4px;
+  height: 40px;
+  display:flex;
+  justify-content:center;
+}
+
+.Category {
+  padding: 10px 25px;
+}

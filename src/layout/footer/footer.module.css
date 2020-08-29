@@ -1,0 +1,42 @@
+.Footer {
+  background-color: #0c0c0c;
+  color: white;
+  display: flex;
+  max-height: 80%;
+  padding: 1.5625rem 1.9375rem;
+}
+
+.Footer div {
+  margin: 0px 30px;
+}
+
+.FooterLink {
+  list-style: none;
+  color: #b5b5b5;
+  display: initial;
+}
+
+.FooterLink li {
+  text-align: left;
+}
+
+.FooterLink a {
+  color: #b5b5b5;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.FooterLink a:hover {
+  color: white;
+}
+
+.LinkHeader {
+  color: #b5b5b5;
+  font-size: 15px;
+  margin-bottom: -10px;
+  text-align: left;
+}
+
+.LinkHeader:hover {
+  color: white;
+}

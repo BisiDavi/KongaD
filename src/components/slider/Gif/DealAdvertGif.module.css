@@ -1,0 +1,11 @@
+.DealAdvertGif {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.DealAdvertGif img{
+  width: 205px;
+  border-radius: 5px;
+  height:193px;  
+}

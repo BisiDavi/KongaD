@@ -59,10 +59,7 @@ export const men_accessories = [
 
 export const watches = ["Men's Watches", "Women's Watches", "Unisex Watches"];
 
-export const fashion_bundles = [
-  "Women's Fashion Bundles",
-  "Men's Fashion Bundles"
-];
+export const fashion_bundles = ["Women's Fashion Bundles", "Men's Fashion Bundles"];
 
 export const style_finder_women = [
   "Monochrome",
@@ -81,9 +78,8 @@ export const style_finder_men = [
   "Plus Size"
 ];
 
-export const under_5K_shop = [
-  "Men's Fashion Under 5K",
-  "Women's Fashion Under 5K"
-];
+export const under_5K_shop = ["Men's Fashion Under 5K", "Women's Fashion Under 5K"];
 
 export const wedding_shop = ["Women's Wedding Shop", "Men's Wedding Shop"];
+
+export const fashion = ["Women Wear", "Women Shoes", "Women Accessories"];

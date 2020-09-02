@@ -6,11 +6,12 @@ export const Beauty_Health_Personal_Care = [
   "Personal Care",
   "Skin Care",
   "Sexual Wellness",
-  "Sports and Fitness",
-  "Fitness"
+  
 ];
 
 export const Outdoor_Indoor_Games = [
+  "Sports and Fitness",
+  "Fitness",
   "Sportswear",
   "Football",
   "Swimming",
@@ -66,3 +67,9 @@ export const Tools = [
   "Electrical Fittings"
 ];
 export const Groceries = ["Beverages", "Food", "Frozen Food"];
+
+export const wine = [
+  "Beauty,Health & Personal Care",
+  "Sports and Fitness",
+  "Books & Media Library"
+];

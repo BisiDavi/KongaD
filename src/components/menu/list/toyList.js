@@ -1,3 +1,4 @@
+
 export const Fashion_for_Girls = [
 "Sets",
 "Dresses",
@@ -66,3 +67,7 @@ export const Kid_Beddings_Decor = [
 "Décor Accessories",
 "Furniture",
 ]
+
+export const babytoys = ["Fashion for Girls",
+"Fashion for Boys",
+"Baby Essentials",];

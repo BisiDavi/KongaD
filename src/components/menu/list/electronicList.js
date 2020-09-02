@@ -24,11 +24,7 @@ export const Accessories = [
   "Gaming Accessories"
 ];
 
-export const home_theatres = [
-  "Home Theatre",
-  "HiFi Systems",
-  "MP3 Players & Speakers"
-];
+export const home_theatres = ["Home Theatre", "HiFi Systems", "MP3 Players & Speakers"];
 
 export const gamesConsoles = [
   "PS4",
@@ -40,3 +36,5 @@ export const gamesConsoles = [
   "PS Vita",
   "Nintendo 3DS"
 ];
+
+export const electronic = ["Televisions", "DVD", "Cameras"];

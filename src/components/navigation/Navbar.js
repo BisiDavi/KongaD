@@ -11,17 +11,18 @@ import {
 } from "../menu/list/categoryList";
 import classes from "./Navbar.module.css";
 
+export const navLinks = [
+  "All Categories",
+  "Computers and Accessories",
+  "Phones and Tablets",
+  "Electronics",
+  "Konga Fashion",
+  "Home and Kitchen",
+  "Baby,Kids and Toys",
+  "Wines & Other Categories"
+];
+
 const Navbar = () => {
-  const navLinks = [
-    "All Categories",
-    "Computers and Accessories",
-    "Phones and Tablets",
-    "Electronics",
-    "Konga Fashion",
-    "Home and Kitchen",
-    "Baby,Kids and Toys",
-    "Wines & Other Categories"
-  ];
 
   const [navMenu, setNavMenu] = useState(null);
   // const [menuHolder, setMenuHolder] = useState(null);

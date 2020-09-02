@@ -45,3 +45,5 @@ export const Software = [
   "Security & Utilities"
 ];
 
+export const computer_accessories = ["Laptops", "Deskop Monitors"
+,"Computing Accessories"];

@@ -62,3 +62,5 @@ export const Others = [
   "Towel Racks",
   "Garment Steamers"
 ];
+
+export const Home_kitchen = ["Large Appliances", "Small Appliances", "Home Furnishings"];

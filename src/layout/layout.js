@@ -1,14 +1,15 @@
-import React from 'react';
-import { Header, Footer } from '../imports/.';
+import React from "react";
+import { Header, Footer, Branddetails } from "../imports/.";
 
-const Layout = (props) => {
+const Layout = props => {
   return (
     <>
       <Header />
       {props.children}
+      <Branddetails />
       <Footer />
     </>
   );
-}
+};
 
-export default Layout
+export default Layout;

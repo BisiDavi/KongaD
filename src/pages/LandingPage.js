@@ -5,10 +5,10 @@ import {
   DealAdvertGif,
   CardTags,
   GroupCard,
-  LatestDeals
+  LatestDeals,
+  Popularcategory
 } from "../imports/.";
-// import { showMenu } from "../components/menu/menu";
-// import { computersMenu } from "../components/menu/list/categoryList";
+
 import classes from "./LandingPage.module.css";
 
 const LandingPage = () => {
@@ -23,11 +23,10 @@ const LandingPage = () => {
         </div>
       </section>
       <section className={classes.OtherSection}>
-        {/* <Menu /> */}
-        {/* {showMenu(computersMenu)} */}
         <CardTags />
         <GroupCard />
         <LatestDeals />
+        <Popularcategory/>
       </section>
     </Layout>
   );

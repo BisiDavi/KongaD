@@ -28,3 +28,9 @@ export const shop_by_price = [
 ];
 
 export const tablet = ["Android", "iOS", "Windows", "Other OS'"];
+
+export const phones_tablet = [
+  "Mobile Phones",
+  "Tablet Accessories",
+  "Mobile Phone Accessories"
+];

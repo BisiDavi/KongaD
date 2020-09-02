@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/bisidavi.github.io/KongaD/static/css/main.6ba9bd7a.chunk.css",
+    "main.js": "/bisidavi.github.io/KongaD/static/js/main.c337dc7c.chunk.js",
+    "main.js.map": "/bisidavi.github.io/KongaD/static/js/main.c337dc7c.chunk.js.map",
+    "runtime-main.js": "/bisidavi.github.io/KongaD/static/js/runtime-main.d4c4bfa6.js",
+    "runtime-main.js.map": "/bisidavi.github.io/KongaD/static/js/runtime-main.d4c4bfa6.js.map",
+    "static/css/2.fb346933.chunk.css": "/bisidavi.github.io/KongaD/static/css/2.fb346933.chunk.css",
+    "static/js/2.6f7eaa0b.chunk.js": "/bisidavi.github.io/KongaD/static/js/2.6f7eaa0b.chunk.js",
+    "static/js/2.6f7eaa0b.chunk.js.map": "/bisidavi.github.io/KongaD/static/js/2.6f7eaa0b.chunk.js.map",
+    "index.html": "/bisidavi.github.io/KongaD/index.html",
+    "precache-manifest.62129d4b4d6ca1588ae6be68541fe9b4.js": "/bisidavi.github.io/KongaD/precache-manifest.62129d4b4d6ca1588ae6be68541fe9b4.js",
+    "service-worker.js": "/bisidavi.github.io/KongaD/service-worker.js",
+    "static/css/2.fb346933.chunk.css.map": "/bisidavi.github.io/KongaD/static/css/2.fb346933.chunk.css.map",
+    "static/css/main.6ba9bd7a.chunk.css.map": "/bisidavi.github.io/KongaD/static/css/main.6ba9bd7a.chunk.css.map",
+    "static/js/2.6f7eaa0b.chunk.js.LICENSE.txt": "/bisidavi.github.io/KongaD/static/js/2.6f7eaa0b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d4c4bfa6.js",
+    "static/css/2.fb346933.chunk.css",
+    "static/js/2.6f7eaa0b.chunk.js",
+    "static/css/main.6ba9bd7a.chunk.css",
+    "static/js/main.c337dc7c.chunk.js"
+  ]
+}

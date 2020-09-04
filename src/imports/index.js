@@ -8,6 +8,7 @@ export { default as CardTags } from "../components/card/CardTags";
 export { default as GroupCard } from "../components/card/groupCard";
 export { default as ProductCard } from "../components/card/ProductCard";
 export { default as HoverCard } from "../components/card/hovercard";
+export { default as ShowcaseCard } from "../components/card/showcaseCard";
 
 export { default as LatestDeals } from "../components/group/deals/latestdeals";
 export { default as RecommendedProducts } from "../components/group/recommended/recommendedProducts";
@@ -80,6 +81,8 @@ export { default as Popularcategory } from "../utils/popularCategories/popularca
 export { default as AdsBanner } from "../utils/banner/banner1";
 export { default as ProductBanner } from "../utils/banner/banner2";
 export { default as CategoryBanner } from "../utils/banner/categoryBanner";
+export { default as BestSellingProducts } from "../utils/showcaseProduct/bestSelling/bestSelling";
+export { default as SponsoredProducts } from "../utils/showcaseProduct/sponsoredProduct/sponsoredProduct";
 
 /* reducers */
 export {default as CounterReducer} from '../store/reducers/counterReducer'

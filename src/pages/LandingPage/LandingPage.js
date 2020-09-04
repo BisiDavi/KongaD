@@ -10,7 +10,9 @@ import {
   CategoryBanner,
   AdsBanner,
   RecommendedProducts,
-  ProductBanner
+  ProductBanner,
+  SponsoredProducts,
+  BestSellingProducts
 } from "../../imports";
 
 import classes from "./LandingPage.module.css";
@@ -29,11 +31,13 @@ const LandingPage = () => {
       <section className={classes.OtherSection}>
         <CardTags />
         <RecommendedProducts />
+        <SponsoredProducts />
         <LatestDeals />
         <GroupCard />
         <ProductBanner />
-        <Popularcategory/>
+        <Popularcategory />
         <AdsBanner />
+        <BestSellingProducts />
         <CategoryBanner />
       </section>
     </Layout>

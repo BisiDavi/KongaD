@@ -2,15 +2,24 @@ import React from "react";
 import { Card } from "../../imports";
 import classes from "./cardtags.module.css";
 
+const cardImagesID = [
+{path:"konga/konga_travel_muxzo3.png", width:"100px"},
+{path:"konga/miniService_kongaPay_zhswha.jpg", width:"150px"},
+{path:"konga/konga-affliates_h40acb.png", width:"160px"},
+{path:"konga/Free-Shipping_xsyw6x.png", width:"150px"}, 
+{path:"konga/return-policy_vmtor7.png", width:"150px"},
+{path:"konga/Store-Locator_jiluds.png", width:"150px"}
+]
+
 const CardTags = () => {
   return (
     <div className={classes.cardtags}>
-      <Card name="Konga" height="50px" />
-      <Card name="Get up 2 2k" height="50px" />
-      <Card name="Konga Affliate" height="50px" />
-      <Card name="Return Policy" height="50px" />
-      <Card name="Free shipping" height="50px" />
-      <Card name="Store Locator" height="50px" />
+      {cardImagesID.map(imgID => (
+        <Card 
+        publicId={imgID.path} 
+        height="50px" 
+        imgWidth={imgID.width} />
+      ))}      
     </div>
   );
 };

@@ -2,7 +2,6 @@
   "name": "konga",
   "version": "0.1.0",
   "private": true,
-  "homepage": "bisidavi.github.io/KongaD",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -10,7 +9,6 @@
     "cloudinary-react": "^1.6.6",
     "cors": "^2.8.5",
     "cra-template": "1.0.3",
-    "gh-pages": "^3.1.0",
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0",
     "passport-local": "^1.0.0",
@@ -24,7 +22,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
+    "recharts": "^1.8.5",
     "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {

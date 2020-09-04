@@ -18,11 +18,12 @@ export { default as KongaCategory } from "../layout/header/KongaCategory";
 export { default as Navigation } from "../layout/header/Navigation";
 export { default as Footer } from "../layout/footer/footer";
 export { default as Branddetails } from "../layout/footer/branddetails/branddetails";
+export { default as Brandlogo } from "../layout/footer/branddetails/brandlogos";
 
 export { default as Layout } from "../layout/layout";
 
 // pages
-export { default as LandingPage } from "../pages/LandingPage";
+export { default as LandingPage } from "../pages/LandingPage/LandingPage";
 
 export { default as AllCategories } from "../components/menu/AllCategories";
 
@@ -34,6 +35,10 @@ export { default as AdminRegister } from "../auth/admin/adminRegister";
 
 export { default as UserRegister } from "../auth/user/userRegister";
 export { default as UserLogin } from "../auth/user/userLogin";
+export { default as Signin } from "../auth/signin";
+export { default as Login } from "../auth/login";
+
+/* routes */
 export { default as AppRoutes } from "../routes";
 
 // nav
@@ -47,6 +52,8 @@ export { default as WineOtherCategories } from "../nav/wineOtherCategories";
 
 // admin
 export { default as Dashboard } from "../admin/dashboard";
+export { default as MainDashboard } from "../admin/dashboard/dashboard";
+
 export { default as Product } from "../admin/Product";
 export { default as Settings } from "../admin/settings";
 export { default as DashboardLayout } from "../admin/layout/Layout";
@@ -69,3 +76,6 @@ export {
 
 // utils
 export { default as Popularcategory } from "../utils/popularCategories/popularcategory";
+
+/* reducers */
+export {default as CounterReducer} from '../store/reducers/counterReducer'

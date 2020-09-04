@@ -7,7 +7,7 @@ import {
   GroupCard,
   LatestDeals,
   Popularcategory
-} from "../imports/.";
+} from "../../imports";
 
 import classes from "./LandingPage.module.css";
 
@@ -24,8 +24,8 @@ const LandingPage = () => {
       </section>
       <section className={classes.OtherSection}>
         <CardTags />
-        <GroupCard />
         <LatestDeals />
+        <GroupCard />
         <Popularcategory/>
       </section>
     </Layout>

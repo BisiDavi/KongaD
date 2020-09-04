@@ -15,7 +15,10 @@ import {
   UserLogin,
   Dashboard,
   Product,
-  Settings
+  Settings,
+  Signin,
+  Login,
+  MainDashboard
 } from "../imports";
 import { navLinks } from "../components/navigation/Navbar";
 
@@ -33,14 +36,45 @@ const AppRoutes = () => {
   return (
     <>
       <Router>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/admin/dashboard" component={Dashboard} />
-        <Route path="/admin/settings" component={Settings} />
-        <Route path="/admin/login" component={AdminLogin} />
-        <Route path="/admin/register" component={AdminRegister} />
-        <Route path="/admin/products" component={Product} />
-        <Route path="/user/login" component={UserLogin} />
-        <Route path="/user/register" component={UserRegister} />
+        <Route
+          exact
+          path="/"
+          component={LandingPage}
+        />
+        {/* <Route path="/admin/dashboard" component={Dashboard} /> */}
+        <Route
+          path="/admin/dashboard"
+          component={MainDashboard}
+        />
+        <Route
+          path="/admin/settings"
+          component={Settings}
+        />
+        <Route
+          path="/admin/login"
+          component={AdminLogin}
+        />
+        {/* <Route path="/admin/register" component={AdminRegister} /> */}
+        <Route
+          path="/admin/register"
+          component={Signin}
+        />
+        <Route
+          path="/admin/register"
+          component={Login}
+        />
+        <Route
+          path="/admin/products"
+          component={Product}
+        />
+        <Route
+          path="/user/login"
+          component={UserLogin}
+        />
+        <Route
+          path="/user/register"
+          component={UserRegister}
+        />
       </Router>
     </>
   );

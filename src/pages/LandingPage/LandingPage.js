@@ -6,7 +6,11 @@ import {
   CardTags,
   GroupCard,
   LatestDeals,
-  Popularcategory
+  Popularcategory,
+  CategoryBanner,
+  AdsBanner,
+  RecommendedProducts,
+  ProductBanner
 } from "../../imports";
 
 import classes from "./LandingPage.module.css";
@@ -24,9 +28,13 @@ const LandingPage = () => {
       </section>
       <section className={classes.OtherSection}>
         <CardTags />
+        <RecommendedProducts />
         <LatestDeals />
         <GroupCard />
+        <ProductBanner />
         <Popularcategory/>
+        <AdsBanner />
+        <CategoryBanner />
       </section>
     </Layout>
   );

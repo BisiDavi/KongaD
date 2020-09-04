@@ -60,7 +60,7 @@ const AppRoutes = () => {
           component={Signin}
         />
         <Route
-          path="/admin/register"
+          path="/admin/login"
           component={Login}
         />
         <Route

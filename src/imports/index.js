@@ -9,7 +9,8 @@ export { default as GroupCard } from "../components/card/groupCard";
 export { default as ProductCard } from "../components/card/ProductCard";
 export { default as HoverCard } from "../components/card/hovercard";
 
-export { default as LatestDeals } from "../components/deals/index";
+export { default as LatestDeals } from "../components/group/deals/latestdeals";
+export { default as RecommendedProducts } from "../components/group/recommended/recommendedProducts";
 export { default as DealAdvertGif } from "../components/slider/Gif/DealAdvertGif";
 
 // layout
@@ -76,6 +77,11 @@ export {
 
 // utils
 export { default as Popularcategory } from "../utils/popularCategories/popularcategory";
+export { default as AdsBanner } from "../utils/banner/banner1";
+export { default as ProductBanner } from "../utils/banner/banner2";
+export { default as CategoryBanner } from "../utils/banner/categoryBanner";
 
 /* reducers */
 export {default as CounterReducer} from '../store/reducers/counterReducer'
+
+

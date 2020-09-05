@@ -15,7 +15,8 @@ const ProductCard = (props) => {
       ? ""
       : `₦${props.formerPrice}`
   return (
-    <div className={classes.productCard}>
+    <div className={classes.productCard} 
+    style={{height: props.height}}>
       <LazyLoadImage
         publicId={props.imgsrc}
         width={props.width}

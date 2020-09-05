@@ -73,12 +73,13 @@ const BestSellingProducts = () => {
       <div className={classes.bestSelling}>
         <HorizontalScroller>
           {productData.map(pdtData => {
-            return (
+            return (              
               <ProductCard
                 key={pdtData.name}
                 imgsrc={`konga/${pdtData.img}`}
                 width="50%"
                 imgheight="50%"
+                height="200px"
                 name={pdtData.name}
                 price={pdtData.price}
                 formerPrice={pdtData.formerPrice}

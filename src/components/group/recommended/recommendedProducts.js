@@ -52,8 +52,7 @@ const RecommendedProducts = () => {
       </div>
       <hr />
       <div className={classes.dealcards}>
-        {recommendedProductsData.map(rPData => {
-          
+        {recommendedProductsData.map(rPData => {          
           return (
             <ProductCard
               key={rPData.name}

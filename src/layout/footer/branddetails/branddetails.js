@@ -2,14 +2,7 @@ import React from "react";
 import classes from "./branddetails.module.css";
 
 const Branddetails = () => {
-  const support = [
-    { title: "EMAIL SUPPORT", description: "help@konga.com" },
-    { title: "PHONE SUPPORT", description: "0701 263 5700, 0809 060 5055" },
-    {
-      title: "GET LATEST DEALS",
-      description: "Our best promotions sent to your inbox."
-    }
-  ];
+
 
   return (
     <div className={classes.branddetails}>
@@ -34,18 +27,6 @@ const Branddetails = () => {
           Quia alias enim ad porro a dolor, ipsam error eaque nemo ea iste eum ipsum, nam
           blanditiis hic fuga ullam, neque fugit quaerat!
         </p>
-      </div>
-      <div className={classes.support}>
-        {support.map(item => (
-          <div key={item.title}>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </div>
-        ))}
-        <form>
-          <input type="text" />
-          <button type="submit">Subscribe</button>
-        </form>
       </div>
     </div>
   );

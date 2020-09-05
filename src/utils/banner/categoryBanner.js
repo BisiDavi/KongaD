@@ -40,7 +40,7 @@ const CategoryBanner = () => {
             <div>
                 <h3>{bData.category}</h3>
                 <p>{bData.subcategory}</p>
-                <h6>SHOP NOW ></h6>
+                <h5>SHOP NOW ></h5>
             </div>
             </Paper>))
             }

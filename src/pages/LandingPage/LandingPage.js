@@ -9,8 +9,10 @@ import {
   Popularcategory,
   CategoryBanner,
   AdsBanner,
+  Branddetails,
   RecommendedProducts,
   ProductBanner,
+  Brandlogo,
   SponsoredProducts,
   BestSellingProducts
 } from "../../imports";
@@ -39,6 +41,8 @@ const LandingPage = () => {
         <AdsBanner />
         <BestSellingProducts />
         <CategoryBanner />
+        <Branddetails />
+        <Brandlogo />
       </section>
     </Layout>
   );

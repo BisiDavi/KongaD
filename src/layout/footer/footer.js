@@ -10,6 +10,37 @@ const Footer = () => {
   const section4 = ['MORE INFO', 'Site Map', 'Track My Order', 'Privacy Policy', 'Authentic Items Policy', 'Forum', 'Terms & Conditions']
   const section5 = ['MAKE MONEY ON KONGA', 'Become a Konga Affiliate']
 
+    const support = [
+      {
+        title: "EMAIL SUPPORT",
+        description: "help@konga.com"
+      },
+      {
+        title: "PHONE SUPPORT",
+        description:
+          "0701 263 5700, 0809 060 5055"
+      },
+      {
+        title: "GET LATEST DEALS",
+        description:
+          "Our best promotions sent to your inbox."
+      }
+    ];
+
+  const footerForm = () => (     
+    <section className={classes.Support}>
+       {support.map(item => (
+         <div key={item.title}>
+           <h3>{item.title}</h3>
+           <p>{item.description}</p>
+         </div>
+       ))}
+       <form>
+         <input type="text" />
+         <button type="submit">Subscribe</button>
+       </form>
+    </section>
+  )
 
   const FooterLinksHandler = (section) => {
     const siteHeader = section[0];
@@ -32,14 +63,17 @@ const Footer = () => {
   }
 
   return (
-    <footer className={classes.Footer}>
-      {FooterLinksHandler(section1)}
-      {FooterLinksHandler(section2)}
-      {FooterLinksHandler(section3)}
-      {FooterLinksHandler(section4)}
-      {FooterLinksHandler(section5)}
+    <footer className={classes.FooterGroup}>
+      {footerForm()}
+      <div className={classes.Footer}>
+        {FooterLinksHandler(section1)}
+        {FooterLinksHandler(section2)}
+        {FooterLinksHandler(section3)}
+        {FooterLinksHandler(section4)}
+        {FooterLinksHandler(section5)}
+      </div>
     </footer>
-  )
+  );
 }
 
 export default Footer;

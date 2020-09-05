@@ -29,6 +29,7 @@
 
 .price p{
   text-decoration: line-through;
+  margin : 0 10px;
 }
 
 .productCard:hover {

@@ -1,13 +1,12 @@
 import React from "react";
-import { Header, Footer, Branddetails, Brandlogo } from "../imports/.";
+import { Header, Footer } from "../imports/.";
 
 const Layout = props => {
   return (
     <>
       <Header />
       {props.children}
-      <Brandlogo />
-      <Branddetails />
+      
       <Footer />
     </>
   );

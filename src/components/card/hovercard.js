@@ -30,8 +30,9 @@ const HoverCard = props => {
       :(<div className={classes.Showonhover}>
         <div className={classes.Header}>
           <div><h4>{props.name}</h4></div>
-          <LazyLoadImage
+        <LazyLoadImage
             publicId={props.thumbnail}
+            width="70%"
           />
         </div>
         <div className={classes.body}>

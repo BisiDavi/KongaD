@@ -30,10 +30,10 @@ const LandingPage = () => {
       </section>
       <section className={classes.OtherSection}>
         <CardTags />
-        <RecommendedProducts />
-        <SponsoredProducts />
-        <LatestDeals />
         <GroupCard />
+        <RecommendedProducts />
+        {/* <SponsoredProducts />
+        <LatestDeals />*/}
         <ProductBanner />
         <Popularcategory />
         <AdsBanner />

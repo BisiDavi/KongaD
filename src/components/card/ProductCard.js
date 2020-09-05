@@ -3,17 +3,32 @@ import classes from "./productcard.module.css";
 import { LazyLoadImage } from "../../imports";
 
 const ProductCard = (props) => {
+  const name = props.name;
+  let shortName = (name.length >= 30)? `${name.slice(0, name.length-6 )}...` : name;
+  const amountSaved =props.formerPrice - props.price;
+    
+  const saved = props.formerPrice === null
+      ? `You save ₦${props.price}`
+      :  `You save ₦${amountSaved}`;
+
+      const oldPrice = props.formerPrice === null
+      ? ""
+      : `₦${props.formerPrice}`
   return (
     <div className={classes.productCard}>
-      <LazyLoadImage 
-      publicId={props.imgsrc} 
-      width={props.width}
-      imgheight={props.imgheight}
-        />
-      <h3>{props.name}</h3>
-      <h2>{props.price}</h2>
-      <h6>{props.formerPrice}</h6>
-      <p>{props.save}</p>
+      <LazyLoadImage
+        publicId={props.imgsrc}
+        width={props.width}
+        imgheight={props.imgheight}
+      />
+      <div>
+        <h3>{shortName}</h3>
+        <div className={classes.price}>
+          <h4>₦{props.price}</h4>
+          <p>{oldPrice}</p>
+        </div>
+        <p>{saved}</p>
+      </div>
     </div>
   );
 };

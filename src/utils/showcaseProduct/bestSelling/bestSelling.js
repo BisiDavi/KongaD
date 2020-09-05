@@ -1,5 +1,6 @@
 import React from 'react';
-import {ShowcaseCard} from '../../../imports';
+import HorizontalScroller from "react-horizontal-scroll-container";
+import { ProductCard } from "../../../imports";
 import classes from './bestSelling.module.css'
 
 const productData = [
@@ -69,25 +70,24 @@ const productData = [
 
 const BestSellingProducts = () => {
     return (
-        <div className={classes.bestSelling}>
+      <div className={classes.bestSelling}>
+        <HorizontalScroller>
           {productData.map(pdtData => {
-            const saved =
-              pdtData.formerPrice - pdtData.price;
-              return (
-                <ShowcaseCard
-                  key={pdtData.name}
-                  img={`konga/${pdtData.img}`}
-                  width="50%"
-                  imgheight="50%"
-                  name={pdtData.name}
-                  price={pdtData.price}
-                  formerPrice={pdtData.formerPrice}
-                  save={saved}
-                />
-              );
-          })}  
-        </div>
-    )
+            return (
+              <ProductCard
+                key={pdtData.name}
+                imgsrc={`konga/${pdtData.img}`}
+                width="50%"
+                imgheight="50%"
+                name={pdtData.name}
+                price={pdtData.price}
+                formerPrice={pdtData.formerPrice}
+              />
+            );
+          })}
+        </HorizontalScroller>
+      </div>
+    );
 }
 
 export default BestSellingProducts

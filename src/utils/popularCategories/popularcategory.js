@@ -13,6 +13,7 @@ import {
   Outdoor_Indoor_Games,
   Automotive
 } from "../../imports";
+import { Paper } from "@material-ui/core";
 
 const hoverCardData = [
   {
@@ -90,18 +91,23 @@ const hoverCardData = [
 
 const Popularcategory = () => {
   return (
-  <div className={classes.Popularcategory}>
-      {hoverCardData.map(cardData => (
-        <HoverCard
-          key={cardData.name}
-          name={cardData.name}
-          imgsrc={`konga/${cardData.imgsrc}`}
-          width="100%"
-          imgheight="50%"
-          thumbnail={`konga/${cardData.thumbnail}`}
-          subCategories={cardData.subCategories}
-        />
-      ))}
+    <div className={classes.Popularcategory}>
+      <div className={classes.Title}>
+        <h1>Popular Categories</h1>
+      </div>
+      <Paper className={classes.Category}>
+          {hoverCardData.map(cardData => (
+            <HoverCard
+              key={cardData.name}
+              name={cardData.name}
+              imgsrc={`konga/${cardData.imgsrc}`}
+              width="100%"
+              imgheight="50%"
+              thumbnail={`konga/${cardData.thumbnail}`}
+              subCategories={cardData.subCategories}
+            />
+          ))}
+        </Paper>
     </div>
   );
 };

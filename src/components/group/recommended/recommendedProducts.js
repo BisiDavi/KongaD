@@ -53,17 +53,15 @@ const RecommendedProducts = () => {
       <hr />
       <div className={classes.dealcards}>
         {recommendedProductsData.map(rPData => {
-          const saved =
-            rPData.formerPrice - rPData.price;
+          
           return (
             <ProductCard
               key={rPData.name}
               name={rPData.name}
-              width="50%"
+              width="100%"
               imgheight="50%"
               price={rPData.price}
               formerPrice={rPData.formerPrice}
-              save={`You save ₦${saved}`}
               imgsrc={`konga/${rPData.img}`}
             />
           );

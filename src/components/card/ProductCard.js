@@ -15,14 +15,16 @@ const ProductCard = (props) => {
       ? ""
       : `₦${props.formerPrice}`
   return (
-    <div className={classes.productCard} 
-    style={{height: props.height}}>
+    <div
+      className={classes.productCard}
+      style={{ height: props.height }}
+    >
       <LazyLoadImage
         publicId={props.imgsrc}
         width={props.width}
         imgheight={props.imgheight}
       />
-      <div>
+      <div className={classes.pricedetails}>
         <h3>{shortName}</h3>
         <div className={classes.price}>
           <h4>₦{props.price}</h4>

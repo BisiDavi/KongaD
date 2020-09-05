@@ -55,7 +55,12 @@
   margin-right: 130px;
 }
 
-.Support h3, p {
+.Support h3 {
+    text-align: left;
+    margin: 10px 0 !important; 
+}
+
+.Support p {
     text-align: left;
     margin: 10px 0 !important; 
 }

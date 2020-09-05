@@ -1,17 +1,20 @@
 import React from "react";
 import classes from "./branddetails.module.css";
+import { Paper } from "@material-ui/core";
 
 const Branddetails = () => {
 
 
   return (
-    <div className={classes.branddetails}>
-      <div className={classes.details}>
+    <Paper className={classes.Branddetails}>
+      <div className={classes.Details}>
         <h4>
           Online Shopping on KongaDemo.com – Nigeria’s Largest Online Mall (I am a demo
           project)
         </h4>
-        <p>
+      </div>
+      <div>
+        <p className={classes.info}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis error, qui
           illo eveniet placeat dolorum et reprehenderit voluptas ducimus. Porro quo minus
           recusandae eos sequi, repellendus consequatur nostrum autem quos est sed fuga
@@ -26,9 +29,9 @@ const Branddetails = () => {
           corporis aspernatur deleniti sequi aut quae illo? Amet laboriosam quos delectus.
           Quia alias enim ad porro a dolor, ipsam error eaque nemo ea iste eum ipsum, nam
           blanditiis hic fuga ullam, neque fugit quaerat!
-        </p>
+        </p>    
       </div>
-    </div>
+    </Paper>
   );
 };
 

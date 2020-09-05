@@ -29,23 +29,25 @@ const bannerData = [
 
 const CategoryBanner = () => {
     return (
-        <div className={classes.CategoryBanner}>
-         { bannerData.map(bData => (
-            <Paper key={bData.category}>
-            <LazyLoadImage 
-            publicId={`konga/${bData.img}.jpg`}
-            width="100%" 
-            imgheight="50%" 
+      <div className={classes.CategoryBanner}>
+        {bannerData.map(bData => (
+          <Paper key={bData.category}>
+            <LazyLoadImage
+              publicId={`konga/${bData.img}.jpg`}
+              width="100%"
+              imgheight="50%"
             />
-            <div>
-                <h3>{bData.category}</h3>
-                <p>{bData.subcategory}</p>
-                <h5>SHOP NOW ></h5>
+            <div
+              className={classes.Details}
+            >
+              <h3>{bData.category}</h3>
+              <p>{bData.subcategory}</p>
+              <h5>SHOP NOW ></h5>
             </div>
-            </Paper>))
-            }
-        </div>
-    )
+          </Paper>
+        ))}
+      </div>
+    );
 }
 
 export default CategoryBanner;

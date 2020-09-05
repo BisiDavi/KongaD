@@ -1,7 +1,6 @@
-/* .bestSelling{
-    display:  flex;
-    justify-content: space-between;
-} */
+.bestSelling{
+    margin: 10px;
+}
 
 .bestSelling img {
     width: 100px;

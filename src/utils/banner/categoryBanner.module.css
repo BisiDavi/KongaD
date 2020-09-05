@@ -1,10 +1,10 @@
 .CategoryBanner{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 40px 20px;
+    margin: 20px;
     grid-gap:20px;
 }
-.CategoryBanner h3, p, h5 {
+.Details{
     text-align: left;
     margin: 20px;
 }

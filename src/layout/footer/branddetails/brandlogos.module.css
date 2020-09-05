@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     height: 20rem;
-    margin: 50px;
+    margin: 20px 20px 30px 20px;
 }
 
 .Brandlogo div{

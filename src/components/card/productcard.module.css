@@ -15,21 +15,30 @@
     transition: box-shadow .4s ease-in-out,-webkit-box-shadow .4s ease-in-out;
 }
 
+.pricedetails{
+  text-align:left;
+}
+
+.pricedetails h3{
+  margin: 0;
+}
+
+.pricedetails p{
+    margin: 0;
+}
+
 .price{
-  display:flex;
+   display: flex;
+    align-items: center;
 }
 
-.price h5 {
-    margin: 24px 10px;
-}
-
-.productCard h5{
-  text-decoration: line-through;
+.price h4 {
+    margin: 0px;
 }
 
 .price p{
   text-decoration: line-through;
-  margin : 0 10px;
+  margin: 4px 10px !important;
 }
 
 .productCard:hover {
@@ -42,7 +51,3 @@
     box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,.12), 0 0.125rem 0.25rem 0 rgba(0,0,0,.08);
 }
 
-.productCard h3, h4, p {
-    margin: 0;
-    text-align: left;
-}

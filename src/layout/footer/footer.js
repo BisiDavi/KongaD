@@ -24,7 +24,7 @@ const Footer = () => {
         title: "GET LATEST DEALS",
         description:
           "Our best promotions sent to your inbox."
-      }
+    }
     ];
 
   const footerForm = () => (     

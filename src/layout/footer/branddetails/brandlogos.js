@@ -9,7 +9,8 @@ const Brandlogos = () => {
     {logosPublicID.map(logoID =>{
       const imgHeight = (logoID === "hp_z9guqa")? "60px" : "auto";
       const imgWidth = (logoID === "hp_z9guqa")? "60px" : "100%";
-      return <LazyLoadImage 
+      return <LazyLoadImage
+              key={logoID} 
               publicId={`konga/${logoID}.png`}
               width={imgWidth} 
               imgheight={imgHeight} 

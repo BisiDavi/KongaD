@@ -1,6 +1,7 @@
 import React from 'react'
 import { Paper } from '@material-ui/core';
 import {LazyLoadImage} from '../../imports'
+import classes from './categoryBanner.module.css'
 
 const bannerData = [
   {
@@ -28,10 +29,14 @@ const bannerData = [
 
 const CategoryBanner = () => {
     return (
-        <div>
+        <div className={classes.CategoryBanner}>
          { bannerData.map(bData => (
-            <Paper>
-            <LazyLoadImage publicId={`konga/${bData.img}.jpg`} />
+            <Paper key={bData.category}>
+            <LazyLoadImage 
+            publicId={`konga/${bData.img}.jpg`}
+            width="100%" 
+            imgheight="50%" 
+            />
             <div>
                 <h3>{bData.category}</h3>
                 <p>{bData.subcategory}</p>

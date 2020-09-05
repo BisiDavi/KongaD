@@ -1,0 +1,12 @@
+.Banner{    
+    margin:20px;
+}
+
+.Paper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Paper div{
+    padding:5px;
+}

@@ -96,6 +96,8 @@ const Popularcategory = () => {
           key={cardData.name}
           name={cardData.name}
           imgsrc={`konga/${cardData.imgsrc}`}
+          width="100%"
+          imgheight="50%"
           thumbnail={`konga/${cardData.thumbnail}`}
           subCategories={cardData.subCategories}
         />

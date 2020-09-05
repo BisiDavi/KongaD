@@ -57,7 +57,10 @@ const RecommendedProducts = () => {
             rPData.formerPrice - rPData.price;
           return (
             <ProductCard
+              key={rPData.name}
               name={rPData.name}
+              width="50%"
+              imgheight="50%"
               price={rPData.price}
               formerPrice={rPData.formerPrice}
               save={`You save ₦${saved}`}

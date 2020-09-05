@@ -1,5 +1,6 @@
 import React from 'react';
 import {ShowcaseCard} from '../../../imports';
+import classes from './bestSelling.module.css'
 
 const productData = [
   {
@@ -68,13 +69,16 @@ const productData = [
 
 const BestSellingProducts = () => {
     return (
-        <div>
+        <div className={classes.bestSelling}>
           {productData.map(pdtData => {
             const saved =
               pdtData.formerPrice - pdtData.price;
               return (
                 <ShowcaseCard
+                  key={pdtData.name}
                   img={`konga/${pdtData.img}`}
+                  width="50%"
+                  imgheight="50%"
                   name={pdtData.name}
                   price={pdtData.price}
                   formerPrice={pdtData.formerPrice}

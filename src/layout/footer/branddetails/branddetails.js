@@ -37,7 +37,7 @@ const Branddetails = () => {
       </div>
       <div className={classes.support}>
         {support.map(item => (
-          <div>
+          <div key={item.title}>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
           </div>

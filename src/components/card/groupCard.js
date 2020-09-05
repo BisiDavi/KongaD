@@ -7,7 +7,7 @@ const imgPublicID = ["konga/slippers_s1mcjc.png", "konga/indomitables_frchww.png
 const GroupCard = () => {
   return (
     <div className={classes.groupCard}>
-      {imgPublicID.map(publicID => <LazyLoadImage 
+      {imgPublicID.map(publicID => <LazyLoadImage key={publicID}
       publicId={publicID} width="100%" />)}
     </div>
   );

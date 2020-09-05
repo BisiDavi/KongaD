@@ -1,5 +1,8 @@
 import React from 'react';
-import {Card} from '../../imports'
+import { LazyLoadImage} from '../../imports'
+import { Paper } from '@material-ui/core';
+import classes from "./banner1.module.css";
+
 
 const imgPublicID = [
   "saveup_saf6k3",
@@ -8,10 +11,16 @@ const imgPublicID = [
 
 const AdsBanner = () => {
     return (
-      <div className="Banner">
+      <div className={classes.Banner}>
+        <Paper className={classes.Paper}>
         {imgPublicID.map( publicID => 
-        <Card key={publicID} publicId={`konga/${publicID}`} />
-        )}
+            <LazyLoadImage
+            key={publicID}
+            width="100%"            
+            publicId={`konga/${publicID}`}
+            />
+          )}
+        </Paper>
       </div>
     );
 }

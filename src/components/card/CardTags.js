@@ -14,8 +14,9 @@ const cardImagesID = [
 const CardTags = () => {
   return (
     <div className={classes.cardtags}>
-      {cardImagesID.map(imgID => (
+      {cardImagesID.map((imgID) => (
         <Card 
+        key={imgID.path}
         publicId={imgID.path} 
         height="50px" 
         imgWidth={imgID.width} />

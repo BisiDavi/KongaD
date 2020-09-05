@@ -1,6 +1,8 @@
 import React from "react";
 import { ShowcaseCard } from "../../../imports";
 
+import classes from './sponsoredProduct.module.css'
+
 const productData = [
   {
     name: "Dining Table set",
@@ -68,13 +70,16 @@ const productData = [
 
 const SponsoredProducts = () => {
   return (
-    <div>
+    <div className={classes.SponsoredProducts}>
       {productData.map(pdtData => {
         const saved =
           pdtData.formerPrice - pdtData.price;
         return (
           <ShowcaseCard
+            key={pdtData.name}
             img={`konga/${pdtData.img}`}
+            width="50%"
+            height="50%"
             name={pdtData.name}
             price={pdtData.price}
             formerPrice={pdtData.formerPrice}

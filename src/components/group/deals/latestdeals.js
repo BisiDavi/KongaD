@@ -55,6 +55,7 @@ const LatestDeals = () => {
           const saved = dData.formerPrice - dData.price;
         return (
           <ProductCard
+            key={dData.name}
             name={dData.name}
             price={dData.price}
             formerPrice={dData.formerPrice}

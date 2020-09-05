@@ -55,7 +55,10 @@ const LatestDeals = () => {
           const saved = dData.formerPrice - dData.price;
         return (
           <ProductCard
+            key={dData.name}
             name={dData.name}
+            width="50%"
+            imgheight="50%"
             price={dData.price}
             formerPrice={dData.formerPrice}
             save={`You save ₦${saved}`}

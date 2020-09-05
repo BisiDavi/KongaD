@@ -1,29 +1,45 @@
-import React from "react";
+import React, {useState} from "react";
+
 import { LazyLoadImage } from "../../imports";
 
 import classes from "./hovercard.module.css";
 
 const HoverCard = props => {
+  const [showDetails, setShowDetails] = useState(true);
+  const onmouseEnter = () => setShowDetails(false);
+  const onmouseLeave = () => setShowDetails(true);
+
   const subCategory = props.subCategories.slice(0, 3);
+    
   return (
-    <div className={classes.hovercard}>
-      <LazyLoadImage
-        publicId={props.imgsrc}
-      />
-      <h3>{props.name}</h3>
-      <div className={classes.showonhover}>
-        <div className={classes.header}>
-          <h3>{props.name}</h3>
+    <div className={classes.Hovercard} 
+      onMouseEnter={onmouseEnter}
+    onMouseLeave={onmouseLeave}
+      >
+      {(showDetails) 
+      ?(
+      <>
+        <LazyLoadImage
+          publicId={props.imgsrc}
+          width={props.width}
+          imgheight={props.imgheight}
+        />
+        <h3>{props.name}</h3>
+      </>
+      ) 
+      :(<div className={classes.Showonhover}>
+        <div className={classes.Header}>
+          <div><h4>{props.name}</h4></div>
           <LazyLoadImage
             publicId={props.thumbnail}
           />
         </div>
         <div className={classes.body}>
           {subCategory.map(subcategory => (
-            <li>{subcategory}</li>
+            <li key={subcategory}>{subcategory}</li>
           ))}
         </div>
-      </div>
+      </div>)   }
     </div>
   );
 };

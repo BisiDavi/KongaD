@@ -5,10 +5,11 @@ import {Paper} from '@material-ui/core'
 const ShowcaseCard = (props) => {
     return (
     <Paper>
+    
           <div className="percentage">
               {props.percent}
           </div>
-        <LazyLoadImage publicId={props.img} />
+        <LazyLoadImage width={props.width} height={props.imgheight} publicId={props.img} />
         <h3>{props.name}</h3>
         <div className="price">
           <h1>₦{props.price}</h1>

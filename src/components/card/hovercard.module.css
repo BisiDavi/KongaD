@@ -1,0 +1,50 @@
+.Hovercard{
+    width: 100%;
+    position:relative;
+}
+
+.Hovercard h3{
+    position: absolute;
+    bottom: 10%;
+    color:white;
+}
+
+.Showonhover{
+    background: white;
+}
+
+.Hseader {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.Header h4 {
+    color: black;
+}
+
+.header img {
+    width: 30%;
+}
+
+.body {
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.body li {
+    list-style:none;
+}
+.body li:hover {
+    background: #ccc;
+    padding: 5px;
+    margin: 0px;
+}
+
+.Showonhover .header{
+    display:grid;
+    grid-template-columns: 0.6fr 0.4fr;
+}
+
+.body li{
+    color:black
+}

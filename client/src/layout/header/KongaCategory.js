@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './KongaCategory.module.css';
 import { Grid } from '@material-ui/core';
-import { LazyLoadImage } from '../../imports/.';
+import { LazyLoadImage } from '../../imports';
 
 
 const kongaCategoryImageLink = [

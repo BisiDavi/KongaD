@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core';
 
-import { Navbar, KongaCategory, LazyLoadImage, Navigation } from '../../imports/.';
+import { Navbar, KongaCategory, LazyLoadImage, Navigation } from '../../imports';
 
 const useStyles = makeStyles({
   headerGif: {

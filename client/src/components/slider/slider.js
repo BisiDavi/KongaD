@@ -1,7 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { LazyLoadImage } from '../../imports/.';
-
+import { LazyLoadImage } from '../../imports';
 import classes from './slider.module.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -16,7 +15,9 @@ const displaySlider = slidersPublicId.map(imageID => (
   </div>
 ))
 
-const Slider = () => {
+const Slider = (props) => {
+  const {loading = true} = props;
+
   return (
     <Carousel
       className={classes.Carousel}
@@ -27,7 +28,7 @@ const Slider = () => {
       transitionTime={1000}
       showThumbs={false}>
       {displaySlider}
-    </Carousel>
+    </Carousel>    
   )
 }
 export default Slider;

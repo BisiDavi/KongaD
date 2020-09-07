@@ -1,5 +1,5 @@
 import React from 'react';
-import { LazyLoadImage } from '../../../imports/.';
+import { LazyLoadImage } from '../../../imports';
 
 import classes from './DealAdvertGif.module.css';
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Footer } from "../imports/.";
+import { Header, Footer } from "../imports";
 
 const Layout = props => {
   return (

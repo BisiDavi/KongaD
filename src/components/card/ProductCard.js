@@ -8,7 +8,7 @@ const ProductCard = (props) => {
   const amountSaved =props.formerPrice - props.price;
     
   const saved = props.formerPrice === null
-      ? `You save ₦${props.price}`
+      ? ``
       :  `You save ₦${amountSaved}`;
 
       const oldPrice = props.formerPrice === null
@@ -17,7 +17,7 @@ const ProductCard = (props) => {
   return (
     <div
       className={classes.productCard}
-      style={{ height: props.height }}
+      style={{ height: props.height , width:props.cardWidth}}
     >
       <LazyLoadImage
         publicId={props.imgsrc}

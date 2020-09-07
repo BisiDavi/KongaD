@@ -25,8 +25,8 @@ const productData = [
     formerPrice: 125000
   },
   {
-    name: "Sadia kitchen, dining table and chair",
-    img: "",
+    name: "Dining table and chair",
+    img: "dining_table_zzy5n8",
     price: 195000,
     formerPrice: null
   },
@@ -79,7 +79,8 @@ const BestSellingProducts = () => {
                 imgsrc={`konga/${pdtData.img}`}
                 width="50%"
                 imgheight="50%"
-                height="200px"
+                cardWidth="400px"
+                height="125px"
                 name={pdtData.name}
                 price={pdtData.price}
                 formerPrice={pdtData.formerPrice}

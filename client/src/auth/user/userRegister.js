@@ -1,17 +1,19 @@
 import React, { useState } from "react";
+import {Paper, TextField, Button} from '@material-ui/core';
 
 const UserRegister = () => {
   const [registerform, setRegisterform] = useState({
-    userName: "",
+    username: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
+    redirectTo : null
   });
 
   const userNameHandler = e => {
     setRegisterform({
       ...registerform,
-      userName: e.target.value
+      username: e.target.value
     });
   };
 
@@ -48,33 +50,51 @@ const UserRegister = () => {
     <div>
       <div className="Register">
         <div className="admin-picture"></div>
-        <form className="registerform" onSubmit={onSubmitHandler}>
-          <input
-            type="text"
-            onChange={userNameHandler}
-            value={registerform.userName}
-            placeholder="user Name"
-          />
-          <input
-            type="email"
-            value={registerform.email}
-            onChange={emailHandler}
-            placeholder="Email"
-          />
-          <input
-            type="password"
-            value={registerform.password}
-            onChange={passwordHandler}
-            placeholder="Password"
-          />
-          <input
-            type="password"
-            value={registerform.confirmPassword}
-            onChange={checkPasswordHandler}
-            placeholder="Confirm Password"
-          />
-          <button type="submit">Register</button>
-        </form>
+        <Paper>
+          <h1>Create An Account</h1>
+          <form
+            className="registerform"
+            onSubmit={onSubmitHandler}
+          >
+            <TextField
+              label="First Name"
+              type="text"
+              onChange={userNameHandler}
+              value={registerform.username}
+              placeholder="Enter First Name"
+            />
+            <TextField
+              label="Last Name"
+              type="text"
+              onChange={userNameHandler}
+              value={registerform.username}
+              placeholder="Enter Last Name"
+            />
+            <TextField
+              label="Email Address"
+              type="email"
+              value={registerform.email}
+              onChange={emailHandler}
+              placeholder="Enter Email Address"
+            />
+            <TextField
+              label="Phone Number"
+              type="number"
+              value={registerform.email}
+              onChange={emailHandler}
+              placeholder="Enter Phone Number"
+            />
+            <TextField
+              type="password"
+              value={registerform.password}
+              onChange={passwordHandler}
+              placeholder="Password"
+            />
+            <Button type="submit">
+              Create an Account
+            </Button>
+          </form>
+        </Paper>
       </div>
     </div>
   );

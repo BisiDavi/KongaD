@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {
   makeStyles, AppBar, Toolbar,InputBase
 } from '@material-ui/core';
@@ -73,11 +74,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function PrimarySearchAppBar() {
+ function PrimarySearchAppBar() {
   const classes = useStyles();
   return (
     <div className={classes.grow}>
-      <AppBar className={classes.AppBar} position="static">
+      <AppBar
+        className={classes.AppBar}
+        position="static"
+      >
         <Toolbar>
           <LazyLoadImage
             publicId="konga/konga_logo_f27l0w.webp"
@@ -85,12 +89,16 @@ export default function PrimarySearchAppBar() {
             height="40"
             width="128"
           />
-          <div className={classes.storeLocator}>
-            <p>Store Locator</p>
-          </div>
-          <div className={classes.help}>
-
-          </div>
+          <ul>
+            <li className={classes.storeLocator}>
+              Store Locator
+            </li>
+            <li className={classes.help}>
+              Help
+              <li>FAQ's</li>
+              <li>Contact Us</li>
+            </li>
+          </ul>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -99,16 +107,37 @@ export default function PrimarySearchAppBar() {
               placeholder="Search for products brands and categories"
               classes={{
                 root: classes.inputRoot,
-                input: classes.inputInput,
+                input: classes.inputInput
               }}
               inputProps={{
-                'aria-label': 'search'
+                "aria-label": "search"
               }}
             />
           </div>
-          <div className={classes.grow} />
+          <ul>
+            <li className={classes.Sell}>
+              Sell on Konga
+            </li>
+            <li className={classes.help}>
+              Login/Signup
+            </li>
+          </ul>
+          <div className="cart">
+            <Button>
+              My Cart <span>{props.counter}</span>
+            </Button>
+          </div>
         </Toolbar>
-      </AppBar>    
+      </AppBar>
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+    counter : state.counter
+    return counter
+}
+
+export default connect(mapStateToProps)(
+  PrimarySearchAppBar
+);

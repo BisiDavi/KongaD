@@ -60,7 +60,7 @@ const Navbar = () => {
   const tempMenu2 = () => setNavMenu(null);
 
   const displayNavlinks = navLinks.map((link, index) => (
-    <div key={index}>
+    <div  key={index}>
       <li
         key={index}
         onMouseOverCapture={() => showNavMenu(link)}

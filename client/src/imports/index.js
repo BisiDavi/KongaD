@@ -32,13 +32,11 @@ export { default as AllCategories } from "../components/menu/AllCategories";
 export { default as Menu } from "../components/menu/menu";
 
 // auth
-export { default as AdminLogin } from "../auth/admin/adminLogin";
-export { default as AdminRegister } from "../auth/admin/adminRegister";
-
 export { default as UserRegister } from "../auth/user/userRegister";
-export { default as UserLogin } from "../auth/user/userLogin";
-export { default as Signin } from "../auth/signin";
-export { default as Login } from "../auth/login";
+export { default as ModalLogin } from "../auth/user/modalLogin";
+export { default as UserLogin } from "../auth/user/Login";
+export { default as Signin } from "../auth/admin/signin";
+export { default as Login } from "../auth/admin/login";
 
 /* routes */
 export { default as AppRoutes } from "../routes";
@@ -53,14 +51,8 @@ export { default as Phones } from "../nav/phones";
 export { default as WineOtherCategories } from "../nav/wineOtherCategories";
 
 // admin
-export { default as Dashboard } from "../admin/dashboard";
 export { default as MainDashboard } from "../admin/dashboard/dashboard";
 
-export { default as Product } from "../admin/Product";
-export { default as Settings } from "../admin/settings";
-export { default as DashboardLayout } from "../admin/layout/Layout";
-export { default as DashboardHeader } from "../admin/layout/dashboardHeader";
-export { default as DashboardSidebar } from "../admin/layout/dashboardSidebar";
 
 // list
 export { computer_accessories } from "../components/menu/list/computerList";
@@ -77,6 +69,8 @@ export {
 } from "../components/menu/list/wineList";
 
 // utils
+
+export { default as Modal } from "../utils/modal/modal";
 export { default as Popularcategory } from "../utils/popularCategories/popularcategory";
 export { default as AdsBanner } from "../utils/banner/banner1";
 export { default as ProductBanner } from "../utils/banner/banner2";

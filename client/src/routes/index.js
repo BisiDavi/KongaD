@@ -40,39 +40,26 @@ const AppRoutes = () => {
           exact
           path="/"
           component={LandingPage}
-        />
-        {/* <Route path="/admin/dashboard" component={Dashboard} /> */}
+        />        
         <Route
           path="/admin/dashboard"
           component={MainDashboard}
-        />
+        />        
         <Route
-          path="/admin/settings"
-          component={Settings}
-        />
-        <Route
-          path="/admin/login"
-          component={AdminLogin}
-        />
-        {/* <Route path="/admin/register" component={AdminRegister} /> */}
-        <Route
-          path="/admin/register"
-          component={Signin}
-        />
-        <Route
-          path="/admin/login"
+          exact
+          path="/admin"
           component={Login}
         />
         <Route
-          path="/admin/products"
-          component={Product}
-        />
+          path="/admin/register"
+          component={Signin}
+        />        
         <Route
-          path="/user/login"
+          path="/account/login"
           component={UserLogin}
         />
         <Route
-          path="/user/register"
+          path="/account/register"
           component={UserRegister}
         />
       </Router>

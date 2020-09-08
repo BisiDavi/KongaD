@@ -1,87 +1,142 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {
+import {Button,
   makeStyles, AppBar, Toolbar,InputBase
 } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import { LazyLoadImage } from '../../imports';
+import { LazyLoadImage, ModalLogin } from "../../imports";
+// import classe
+import { Link } from 'react-router-dom';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   grow: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2)
   },
   title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "block"
+    }
   },
   AppBar: {
-    background: '#ed017f !important'
+    background: "#ed017f !important",
+    height:"70px"
   },
   search: {
-    position: 'relative',
+    position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: 'white',
-    '&:hover': {
-      backgroundColor: 'white',
+    backgroundColor: "white",
+    "&:hover": {
+      backgroundColor: "white"
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
-    width: '100vh',
-    [theme.breakpoints.up('sm')]: {
+    width: "100vh",
+    [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
-      width: 'auto',
-    },
+      width: "auto"
+    }
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    right: '0',
-    borderBottomRightRadius: '5px',
-    borderTopRightRadius: '5px',
-    alignItems: 'center',
-    backgroundColor: '#fba100',
-    color: 'white',
-    justifyContent: 'center',
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    right: "0",
+    borderBottomRightRadius: "5px",
+    borderTopRightRadius: "5px",
+    alignItems: "center",
+    backgroundColor: "#fba100",
+    color: "white",
+    justifyContent: "center"
   },
   inputRoot: {
-    color: '#4a4a4a',
+    color: "#4a4a4a"
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '50ch',
-    },
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "50ch"
+    }
   },
   logo: {
-    pointer: 'cursor'
+    pointer: "cursor"
   },
   storeLocator: {
-    '&:hover': {
-      backgroundColor: 'white'
+    "&:hover": {
+      backgroundColor: "white"
     }
-  }
+  },
+  closeButton: {
+    position: "absolute",
+    background: "gray",
+    zIndex: "2000",
+    color: "white",
+    fontWeight: "bold",
+    top: "30px",
+    right: "20px",
+    "&:hover": {
+      background: "red",
+      color: "black"
+    }
+  },
+  menulist: {
+    "& li": {
+      "&:hover":{
+        background:"white",
+        color: "#ed017f"
+      },
+      listStyle: "none",
+      margin: "0 20px",
+      cursor: "pointer",
+      width:"98px",
+      padding: "25px 0",
+    },
+    display: "flex"
+  },
+  help: {
+    "&:hover": {
+      display: "block"
+    },
+    "& ul": {
+      display: "none"
+    }
+  },
+  cartButton:{
+    background: "green",
+    color: "white",
+    width: "20vh",
+    height: "40px",
+    marginLeft: "-10px",
+},
+counter:{
+    background: "white",
+    color: "black",
+    width: "20px",
+    margin: "10px",
+}
 }));
 
- function PrimarySearchAppBar() {
+
+ function PrimarySearchAppBar(props) {
+  const [open, setOpen] = React.useState(false);
+
+  const showModal = () => setOpen(true);
+
+  const closeModal = () => setOpen(false)
+
   const classes = useStyles();
   return (
     <div className={classes.grow}>
-      <AppBar
-        className={classes.AppBar}
-        position="static"
-      >
+      <AppBar className={classes.AppBar} position="static">
         <Toolbar>
           <LazyLoadImage
             publicId="konga/konga_logo_f27l0w.webp"
@@ -89,14 +144,14 @@ const useStyles = makeStyles((theme) => ({
             height="40"
             width="128"
           />
-          <ul>
-            <li className={classes.storeLocator}>
-              Store Locator
-            </li>
+          <ul className={classes.menulist}>
+            <li className={classes.storeLocator}>Store Locator</li>
             <li className={classes.help}>
               Help
-              <li>FAQ's</li>
-              <li>Contact Us</li>
+              <ul>
+                <li>FAQ's</li>
+                <li>Contact Us</li>
+              </ul>
             </li>
           </ul>
           <div className={classes.search}>
@@ -114,30 +169,36 @@ const useStyles = makeStyles((theme) => ({
               }}
             />
           </div>
-          <ul>
-            <li className={classes.Sell}>
-              Sell on Konga
+          <ul className={classes.menulist}>
+            <li className={classes.Sell}>Sell on Konga
             </li>
-            <li className={classes.help}>
+            <li className={classes.login} onClick={showModal}>
               Login/Signup
             </li>
           </ul>
-          <div className="cart">
-            <Button>
-              My Cart <span>{props.counter}</span>
+          <div>
+            <Button className={classes.cartButton}>
+              My Cart <span className={classes.counter} >{props.counter}</span>
             </Button>
           </div>
         </Toolbar>
       </AppBar>
+    {open ? (
+        <>
+          <Button className={classes.closeButton} onClick={closeModal}>
+            Close
+          </Button>
+          <ModalLogin handleOpen={open} handleClose={closeModal} />
+        </>
+      ) : null}
     </div>
   );
 }
 
 const mapStateToProps = (state) => {
-    counter : state.counter
-    return counter
+  return{
+    counter : state.counter    
+  }
 }
 
-export default connect(mapStateToProps)(
-  PrimarySearchAppBar
-);
+export default connect(mapStateToProps)(PrimarySearchAppBar);

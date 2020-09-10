@@ -5,6 +5,9 @@
   "repository": "https://github.com/BisiDavi/KongaD.git",
   "author": "BisiDavi <oludavidconnect@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"cd ../client && yarn start\" \"cd ../server && yarn dev\""
+  },
   "devDependencies": {
     "concurrently": "^5.3.0"
   }

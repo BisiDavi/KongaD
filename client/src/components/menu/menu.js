@@ -12,9 +12,7 @@ export const showMenu = categories => (
         </li>
         {category.map(menu => (
           <li key={menu}>
-            {/* <Link to={menu}> */}
-              {menu !== category[0] ? menu : ""}
-            {/* </Link> */}
+            {menu !== category[0] ? menu : ""}
           </li>
         ))}
       </div>

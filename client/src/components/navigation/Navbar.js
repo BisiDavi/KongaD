@@ -25,7 +25,6 @@ export const navLinks = [
 const Navbar = () => {
 
   const [navMenu, setNavMenu] = useState(null);
-  // const [menuHolder, setMenuHolder] = useState(null);
 
   function showNavMenu(category) {
     switch (category) {
@@ -56,7 +55,6 @@ const Navbar = () => {
     }
   }
 
-  // const tempMenu = () => showNavMenu();
   const tempMenu2 = () => setNavMenu(null);
 
   const displayNavlinks = navLinks.map((link, index) => (

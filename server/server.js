@@ -1,9 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
-const session = require("express-ession");
-const dbConnection = require('.database');
+const session = require("express-session");
+const dbConnection = require('./database');
 const MongoStore = require('connect-mongo')(session)
-const passport = require('/passport');
+const passport = require('./passport');
 
 const app = express();
 const PORT = 8080;

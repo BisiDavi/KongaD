@@ -1,18 +1,24 @@
 /* @make connection to the database */
 
 const mongoose = require('mongoose')
-mongoose.Promise = global.Promise
+const dbURI =
+  "mongodb+srv://olubisi:OLUBISI5256@gad.nfeb6.mongodb.net/kongaDemo?retryWrites=true&w=majority";
 
-const uri = ''
+  getConnection = async () => {
+      try{
+          await  mongoose.connect(dbURI, {
+                    useNewUrlParser: true,
+                    useCreateIndex: true,
+                    useFindAndModify:false,
+                    useUnifiedTopology:true
+                })
+      console.log('Connection to DB successful!')
 
-mongoose.connect(uri).then(
-    () => {
-        console.log('Connected to Mongo')
-    },
-    err => {
-        console.log('error connecting to Mongo: ')
-        console.log(err)
-    }
-)
+      } catch(err){
+          console.log(err)
+      }
+}
+
+getConnection();
 
 module.exports = mongoose.connection

@@ -1,12 +1,16 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import {Button,
-  makeStyles, AppBar, Toolbar,InputBase
-} from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
+import React from "react";
+import { connect } from "react-redux";
+import {
+  Button,
+  makeStyles,
+  AppBar,
+  Toolbar,
+  InputBase
+} from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
 import { LazyLoadImage, ModalLogin } from "../../imports";
 // import classe
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -23,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   },
   AppBar: {
     background: "#ed017f !important",
-    height:"70px"
+    height: "70px"
   },
   search: {
     position: "relative",
@@ -90,17 +94,18 @@ const useStyles = makeStyles(theme => ({
   },
   menulist: {
     "& li": {
-      "&:hover":{
-        background:"white",
+      "&:hover": {
+        background: "white",
         color: "#ed017f"
       },
       listStyle: "none",
-      margin: "0 20px",
+      margin: "0 10px",
       cursor: "pointer",
-      width:"98px",
-      padding: "25px 0",
+      width: "98px",
+      padding: "25px 0"
     },
-    display: "flex"
+    display: "flex",
+    padding: "0px"
   },
   help: {
     "&:hover": {
@@ -110,28 +115,27 @@ const useStyles = makeStyles(theme => ({
       display: "none"
     }
   },
-  cartButton:{
+  cartButton: {
     background: "green",
     color: "white",
     width: "20vh",
     height: "40px",
-    marginLeft: "-10px",
-},
-counter:{
+    marginLeft: "20px"
+  },
+  counter: {
     background: "white",
     color: "black",
     width: "20px",
-    margin: "10px",
-}
+    margin: "10px"
+  }
 }));
 
-
- function PrimarySearchAppBar(props) {
+function PrimarySearchAppBar(props) {
   const [open, setOpen] = React.useState(false);
 
   const showModal = () => setOpen(true);
 
-  const closeModal = () => setOpen(false)
+  const closeModal = () => setOpen(false);
 
   const classes = useStyles();
   return (
@@ -170,20 +174,19 @@ counter:{
             />
           </div>
           <ul className={classes.menulist}>
-            <li className={classes.Sell}>Sell on Konga
-            </li>
+            <li className={classes.Sell}>Sell on Konga</li>
             <li className={classes.login} onClick={showModal}>
               Login/Signup
             </li>
           </ul>
           <div>
             <Button className={classes.cartButton}>
-              My Cart <span className={classes.counter} >{props.counter}</span>
+              My Cart <span className={classes.counter}>{props.counter}</span>
             </Button>
           </div>
         </Toolbar>
       </AppBar>
-    {open ? (
+      {open ? (
         <>
           <Button className={classes.closeButton} onClick={closeModal}>
             Close
@@ -195,10 +198,10 @@ counter:{
   );
 }
 
-const mapStateToProps = (state) => {
-  return{
-    counter : state.counter    
-  }
-}
+const mapStateToProps = state => {
+  return {
+    counter: state.ctr.counter
+  };
+};
 
 export default connect(mapStateToProps)(PrimarySearchAppBar);

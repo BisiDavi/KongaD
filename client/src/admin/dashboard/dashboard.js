@@ -1,43 +1,35 @@
 import React from "react";
 import clsx from "clsx";
-import { makeStyles } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Drawer from "@material-ui/core/Drawer";
-import Box from "@material-ui/core/Box";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
-import Badge from "@material-ui/core/Badge";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
-import Link from "@material-ui/core/Link";
+import {
+  makeStyles,
+  CssBaseline,
+  Drawer,
+  Box,
+  AppBar,
+  Toolbar,
+  List,
+  Typography,
+  Divider,
+  IconButton,
+  Badge,
+  Container,
+  Grid,
+  Paper,
+  Link
+} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import {
-  mainListItems,
-  secondaryListItems
-} from "./listItems";
+import { mainListItems, secondaryListItems } from "./listItems";
 import Chart from "./chart";
 import Deposits from "./deposits";
 import Orders from "./orders";
 
 function Copyright() {
   return (
-    <Typography
-      variant="body2"
-      color="textSecondary"
-      align="center"
-    >
+    <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      <Link
-        color="inherit"
-        href="https://material-ui.com/"
-      >
+      <Link color="inherit" href="https://material-ui.com/">
         Your Website
       </Link>{" "}
       {new Date().getFullYear()}
@@ -64,27 +56,18 @@ const useStyles = makeStyles(theme => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(
-      ["width", "margin"],
-      {
-        easing: theme.transitions.easing.sharp,
-        duration:
-          theme.transitions.duration.leavingScreen
-      }
-    )
+    transition: theme.transitions.create(["width", "margin"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen
+    })
   },
   appBarShift: {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(
-      ["width", "margin"],
-      {
-        easing: theme.transitions.easing.sharp,
-        duration:
-          theme.transitions.duration
-            .enteringScreen
-      }
-    )
+    transition: theme.transitions.create(["width", "margin"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen
+    })
   },
   menuButton: {
     marginRight: 36
@@ -99,26 +82,17 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     whiteSpace: "nowrap",
     width: drawerWidth,
-    transition: theme.transitions.create(
-      "width",
-      {
-        easing: theme.transitions.easing.sharp,
-        duration:
-          theme.transitions.duration
-            .enteringScreen
-      }
-    )
+    transition: theme.transitions.create("width", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen
+    })
   },
   drawerPaperClose: {
     overflowX: "hidden",
-    transition: theme.transitions.create(
-      "width",
-      {
-        easing: theme.transitions.easing.sharp,
-        duration:
-          theme.transitions.duration.leavingScreen
-      }
-    ),
+    transition: theme.transitions.create("width", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen
+    }),
     width: theme.spacing(7),
     [theme.breakpoints.up("sm")]: {
       width: theme.spacing(9)
@@ -154,20 +128,14 @@ export default function Dashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(
-    classes.paper,
-    classes.fixedHeight
-  );
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
         position="absolute"
-        className={clsx(
-          classes.appBar,
-          open && classes.appBarShift
-        )}
+        className={clsx(classes.appBar, open && classes.appBarShift)}
       >
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -192,10 +160,7 @@ export default function Dashboard() {
             Dashboard
           </Typography>
           <IconButton color="inherit">
-            <Badge
-              badgeContent={4}
-              color="secondary"
-            >
+            <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>
@@ -204,10 +169,7 @@ export default function Dashboard() {
       <Drawer
         variant="permanent"
         classes={{
-          paper: clsx(
-            classes.drawerPaper,
-            !open && classes.drawerPaperClose
-          )
+          paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose)
         }}
         open={open}
       >
@@ -223,10 +185,7 @@ export default function Dashboard() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <Container
-          maxWidth="lg"
-          className={classes.container}
-        >
+        <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>

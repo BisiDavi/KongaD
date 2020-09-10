@@ -44,7 +44,10 @@ const AppRoutes = () => {
         <Route
           path="/admin/dashboard"
           component={MainDashboard}
-        />        
+        />
+        <Route
+        path="/products/"
+         />        
         <Route
           exact
           path="/admin"

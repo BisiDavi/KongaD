@@ -1,5 +1,5 @@
 import React from "react";
-import {  AppRoutes } from "./imports/.";
+import { AppRoutes } from "./imports/.";
 
 import "./App.css";
 
@@ -10,5 +10,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;

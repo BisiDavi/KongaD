@@ -53,7 +53,6 @@ export { default as WineOtherCategories } from "../nav/wineOtherCategories";
 // admin
 export { default as MainDashboard } from "../admin/dashboard/dashboard";
 
-
 // list
 export { computer_accessories } from "../components/menu/list/computerList";
 export { phones_tablet } from "../components/menu/list/phoneList";
@@ -70,6 +69,7 @@ export {
 
 // utils
 
+export { default as TabPanel } from "../utils/tabs/Tabs";
 export { default as Modal } from "../utils/modal/modal";
 export { default as Popularcategory } from "../utils/popularCategories/popularcategory";
 export { default as AdsBanner } from "../utils/banner/banner1";
@@ -79,6 +79,5 @@ export { default as BestSellingProducts } from "../utils/showcaseProduct/bestSel
 export { default as SponsoredProducts } from "../utils/showcaseProduct/sponsoredProduct/sponsoredProduct";
 
 /* reducers */
-export {default as CounterReducer} from '../store/reducers/counterReducer'
-
-
+export { default as CounterReducer } from "../store/reducers/counterReducer";
+export { default as ProductReducer } from "../store/reducers/productReducer";

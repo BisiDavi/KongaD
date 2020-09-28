@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import MaterialTable from "material-table";
 
-export default function MaterialTableDemo() {
-  const [state, setState] = React.useState({
+export default function ProductTable() {
+  const [state, setState] = useState({
     columns: [
       { title: "Name", field: "name" },
       { title: "Surname", field: "surname" },

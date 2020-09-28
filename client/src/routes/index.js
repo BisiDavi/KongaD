@@ -9,16 +9,13 @@ import {
   HomeKitchen,
   Phones,
   WineOtherCategories,
-  AdminLogin,
-  AdminRegister,
   UserRegister,
   UserLogin,
-  Dashboard,
-  Product,
-  Settings,
   Signin,
   Login,
-  MainDashboard
+  MainDashboard,
+  ProductTable,
+  DashboardHome
 } from "../imports";
 import { navLinks } from "../components/navigation/Navbar";
 
@@ -36,35 +33,15 @@ const AppRoutes = () => {
   return (
     <>
       <Router>
-        <Route
-          exact
-          path="/"
-          component={LandingPage}
-        />        
-        <Route
-          path="/admin/dashboard"
-          component={MainDashboard}
-        />
-        <Route
-        path="/products/"
-         />        
-        <Route
-          exact
-          path="/admin"
-          component={Login}
-        />
-        <Route
-          path="/admin/register"
-          component={Signin}
-        />        
-        <Route
-          path="/account/login"
-          component={UserLogin}
-        />
-        <Route
-          path="/account/register"
-          component={UserRegister}
-        />
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/admin" component={Login} />
+        <Route path="/admin/dashboard" component={MainDashboard} />
+        <Route path="/admin/register" component={Signin} />
+        <Route path="/admin/dashboard/product" component={ProductTable} />
+        <Route path="/products/" />
+        <Route path="/account/login" component={UserLogin} />
+        <Route path="/account/register" component={UserRegister} />
+        {/* dashboard routes */}
       </Router>
     </>
   );

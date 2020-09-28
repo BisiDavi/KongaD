@@ -51,7 +51,9 @@ export { default as Phones } from "../nav/phones";
 export { default as WineOtherCategories } from "../nav/wineOtherCategories";
 
 // admin
-export { default as MainDashboard } from "../admin/dashboard/dashboard";
+export { default as MainDashboard } from "../dashboard/components/dashboard";
+export { default as ProductTable } from "../dashboard/pages/ProductTable";
+export { default as DashboardHome } from "../dashboard/pages/index";
 
 // list
 export { computer_accessories } from "../components/menu/list/computerList";

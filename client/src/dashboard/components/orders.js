@@ -1,22 +1,17 @@
 import React from "react";
 import Link from "@material-ui/core/Link";
-import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
+import {
+  makeStyles,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow
+} from "@material-ui/core";
 import Title from "./title";
 
 // Generate Order Data
-function createData(
-  id,
-  date,
-  name,
-  shipTo,
-  paymentMethod,
-  amount
-) {
+function createData(id, date, name, shipTo, paymentMethod, amount) {
   return {
     id,
     date,
@@ -92,9 +87,7 @@ export default function Orders() {
             <TableCell>Name</TableCell>
             <TableCell>Ship To</TableCell>
             <TableCell>Payment Method</TableCell>
-            <TableCell align="right">
-              Sale Amount
-            </TableCell>
+            <TableCell align="right">Sale Amount</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -103,22 +96,14 @@ export default function Orders() {
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.shipTo}</TableCell>
-              <TableCell>
-                {row.paymentMethod}
-              </TableCell>
-              <TableCell align="right">
-                {row.amount}
-              </TableCell>
+              <TableCell>{row.paymentMethod}</TableCell>
+              <TableCell align="right">{row.amount}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
       <div className={classes.seeMore}>
-        <Link
-          color="primary"
-          href="#"
-          onClick={preventDefault}
-        >
+        <Link color="primary" href="#" onClick={preventDefault}>
           See more orders
         </Link>
       </div>

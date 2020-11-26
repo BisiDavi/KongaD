@@ -2,13 +2,21 @@ import React from "react";
 import classes from "./groupcard.module.css";
 import { LazyLoadImage } from "../../imports";
 
-const imgPublicID = ["konga/slippers_s1mcjc.png", "konga/indomitables_frchww.png", "konga/watches_x82qtg.png","konga/ladies_flat_lbndjc.png", "konga/kids_dress_pwzgz9.png", "konga/skin_care_fgivhs.png"]
+const imgPublicID = [
+  "konga/beauty_health_fjln6j.png",
+  "konga/drinks_ajrad7.webp",
+  "konga/agricultural_product_bs3xft.webp",
+  "konga/small_appliances_gu07kx.webp",
+  "konga/power_a6bcfj.webp",
+  "konga/baby_kids_toys_zo4u0k.webp"
+];
 
 const GroupCard = () => {
   return (
     <div className={classes.groupCard}>
-      {imgPublicID.map(publicID => <LazyLoadImage key={publicID}
-      publicId={publicID} width="100%" />)}
+      {imgPublicID.map(publicID => (
+        <LazyLoadImage key={publicID} publicId={publicID} width="100%" />
+      ))}
     </div>
   );
 };

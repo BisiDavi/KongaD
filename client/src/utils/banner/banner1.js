@@ -1,28 +1,24 @@
-import React from 'react';
-import { LazyLoadImage} from '../../imports'
-import { Paper } from '@material-ui/core';
+import React from "react";
+import { LazyLoadImage } from "../../imports";
+import { Paper } from "@material-ui/core";
 import classes from "./banner1.module.css";
 
-
-const imgPublicID = [
-  "saveup_saf6k3",
-  "electronics_eq4hjv"
-];
+const imgPublicID = ["fitness_deals_e9roda", "fragrance_hku6bl"];
 
 const AdsBanner = () => {
-    return (
-      <div className={classes.Banner}>
-        <Paper className={classes.Paper}>
-        {imgPublicID.map( publicID => 
-            <LazyLoadImage
+  return (
+    <div className={classes.Banner}>
+      <Paper className={classes.Paper}>
+        {imgPublicID.map(publicID => (
+          <LazyLoadImage
             key={publicID}
-            width="100%"            
+            width="100%"
             publicId={`konga/${publicID}`}
-            />
-          )}
-        </Paper>
-      </div>
-    );
-}
+          />
+        ))}
+      </Paper>
+    </div>
+  );
+};
 
-export default AdsBanner
+export default AdsBanner;

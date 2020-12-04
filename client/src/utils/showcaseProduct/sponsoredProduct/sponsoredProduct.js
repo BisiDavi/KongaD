@@ -27,23 +27,24 @@ const SponsoredProducts = props => {
   getSponsoredProducts();
 
   return (
-    <div className={classes.SponsoredProducts}>
-      {productData.map(pdtData => {
-        const saved = pdtData.formerPrice - pdtData.price;
-        return (
-          <ShowcaseCard
-            key={pdtData.name}
-            img={`konga/${pdtData.img}`}
-            width="50%"
-            height="50%"
-            name={pdtData.name}
-            price={pdtData.price}
-            formerPrice={pdtData.formerPrice}
-            save={saved}
-          />
-        );
-      })}
-    </div>
+    <>
+      <h1 className="text-white text-center">Sponsored Product</h1>
+      <div className={classes.SponsoredProducts}>
+        {productData.map(pdtData => {
+          return (
+            <ShowcaseCard
+              key={pdtData.name}
+              cardWidth="250px"
+              img={`konga/${pdtData.img}`}
+              width="50%"
+              name={pdtData.name}
+              price={pdtData.price}
+              formerPrice={pdtData.formerPrice}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 

@@ -1,19 +1,13 @@
-import React from 'react';
-import { Image } from 'cloudinary-react';
-import LazyLoad from 'react-lazyload';
+import React from "react";
+import { Image } from "cloudinary-react";
+import LazyLoad from "react-lazyload";
 import Skeleton from "@material-ui/lab/Skeleton";
 
 const LazyLoadImage = props => {
   return (
     <LazyLoad
       height={props.height}
-      placeholder={
-        <Skeleton
-          variant="rect"
-          width="100%"       
-          height="150px"   
-        />
-      }      
+      placeholder={<Skeleton variant="rect" width="100%" height="150px" />}
       once
     >
       <Image
@@ -25,7 +19,6 @@ const LazyLoadImage = props => {
       />
     </LazyLoad>
   );
-}
-  
+};
 
 export default LazyLoadImage;

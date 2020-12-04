@@ -15,7 +15,7 @@ const GroupCard = () => {
   return (
     <div className={classes.groupCard}>
       {imgPublicID.map(publicID => (
-        <LazyLoadImage key={publicID} publicId={publicID} width="100%" />
+        <LazyLoadImage key={publicID} publicId={publicID} width="200px" />
       ))}
     </div>
   );

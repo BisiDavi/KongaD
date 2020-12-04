@@ -9,8 +9,10 @@ export { default as GroupCard } from "../components/card/groupCard";
 export { default as ProductCard } from "../components/card/ProductCard";
 export { default as HoverCard } from "../components/card/hovercard";
 export { default as ShowcaseCard } from "../components/card/showcaseCard";
+export { default as PromoBanner } from "../components/card/PromoBanner";
 
 export { default as LatestDeals } from "../components/group/deals/latestdeals";
+// export { default as LatestDeals } from "../components/deals/latestdeals";
 export { default as RecommendedProducts } from "../components/group/recommended/recommendedProducts";
 export { default as DealAdvertGif } from "../components/slider/Gif/DealAdvertGif";
 

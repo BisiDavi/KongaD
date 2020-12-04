@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect} from "react";
+import {connect} from 'react-redux';
 import HorizontalScroller from "react-horizontal-scroll-container";
-import { ProductCard } from "../../../imports";
-import classes from './bestSelling.module.css'
+import { ShowcaseCard } from "../../../imports";
+import classes from "./bestSelling.module.css";
 
 const productData = [
   {
@@ -12,15 +13,13 @@ const productData = [
   },
   {
     name: "Blaze smart fitness watch",
-    img:
-      "Blaze-Smart-Fitness-Watch---Gunmetal-7405545_yupykp",
+    img: "Blaze-Smart-Fitness-Watch---Gunmetal-7405545_yupykp",
     price: 109000,
     formerPrice: 125000
   },
   {
     name: "Blaze smart fitness watch - gunmetal",
-    img:
-      "Charge-2---Heart-Rate-and-Fitness-Wristband-7405349_bjzkia",
+    img: "Charge-2---Heart-Rate-and-Fitness-Wristband-7405349_bjzkia",
     price: 115000,
     formerPrice: 125000
   },
@@ -69,27 +68,29 @@ const productData = [
 ];
 
 const BestSellingProducts = () => {
-    return (
-      <div className={classes.bestSelling}>
-        <HorizontalScroller>
-          {productData.map(pdtData => {
-            return (              
-              <ProductCard
-                key={pdtData.name}
-                imgsrc={`konga/${pdtData.img}`}
-                width="50%"
-                imgheight="50%"
-                cardWidth="400px"
-                height="125px"
-                name={pdtData.name}
-                price={pdtData.price}
-                formerPrice={pdtData.formerPrice}
-              />
-            );
-          })}
-        </HorizontalScroller>
+  return (
+    <div className={classes.bestSelling}>
+      <div className={classes.Title}>
+        <h1>Best Selling Products</h1>
       </div>
-    );
-}
+      <HorizontalScroller>
+        {productData.map(pdtData => {
+          return (
+            <ShowcaseCard
+              key={pdtData.name}
+              imgsrc={`konga/${pdtData.img}`}
+              width="300px"              
+              height="400px"              
+              imgheight="200px"              
+              name={pdtData.name}
+              price={pdtData.price}
+              formerPrice={pdtData.formerPrice}
+            />
+          );
+        })}
+      </HorizontalScroller>
+    </div>
+  );
+};
 
-export default BestSellingProducts
+export default BestSellingProducts;

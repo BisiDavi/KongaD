@@ -1,15 +1,18 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { FetchProducts } from "../../../store/actions/productActions";
-import { ProductCard } from "../../../imports";
-import classes from "./latestdeals.module.css";
+import { FetchProducts } from "../../store/actions/productActions";
+import { ProductCard } from "../../imports";
+import classes from "../group/deals/latestdeals.module.css";
 
 const LatestDeals = props => {
   const products = [];
   const dealsData = [];
+  let sixLatestDeals = []
   useEffect(() => {
     props.dispatch(FetchProducts());
   }, []);
+
+  console.log("PRODUCT", props.product);
 
   const getLatestDeals = () => {
     props.product.map(product => {
@@ -17,7 +20,9 @@ const LatestDeals = props => {
     });
     products.forEach(item => {
       if (item.tag.includes("latest deals")) {
-        return dealsData.push(item);
+        dealsData.push(item);
+        sixLatestDeals = [...dealsData.slice(0, 6)];
+        return sixLatestDeals
       }
     });
   };
@@ -27,23 +32,21 @@ const LatestDeals = props => {
   return (
     <section className={classes.LatestDeals}>
       <div className={classes.header}>
-        <h3>Latest Deals</h3>
-        <p>See all items</p>
+        <h2>Latest Deals</h2>
+        <h6>See all items</h6>
       </div>
       <hr />
       <div className={classes.dealcards}>
-        {dealsData.map(dData => {
-          const saved = dData.formerPrice - dData.price;
+        {sixLatestDeals.map(dData => {
           return (
             <ProductCard
               key={dData.name}
               name={dData.name}
-              width="50%"
-              imgheight="50%"
               price={dData.price}
               formerPrice={dData.formerPrice}
-              save={`You save ₦${saved}`}
               imgsrc={`konga/${dData.img}`}
+              width="100%"
+              imgheight="85%"
             />
           );
         })}

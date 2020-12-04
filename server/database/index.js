@@ -1,12 +1,13 @@
 /* @make connection to the database */
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const dbURI = process.env.MONGO_URI;
 
 dotenv.config();
 
+const dbURI = process.env.MONGO_URI;
 getConnection = async () => {
   try {
+    console.log('dbURI: ',dbURI);
     await mongoose.connect(dbURI, {
       useNewUrlParser: true,
       useCreateIndex: true,

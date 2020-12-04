@@ -24,7 +24,9 @@ const HoverCard = props => {
           width={props.width}
           imgheight={props.imgheight}
         />
+        <span className={classes.Product_name}>
         <h3>{props.name}</h3>
+        </span>
       </>
       ) 
       :(<div className={classes.Showonhover}>

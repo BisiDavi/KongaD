@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+// import axios from "axios";
 
 import {
   Layout,
@@ -8,6 +8,7 @@ import {
   CardTags,
   GroupCard,
   LatestDeals,
+  PromoBanner,
   Popularcategory,
   CategoryBanner,
   AdsBanner,
@@ -36,8 +37,12 @@ const LandingPage = () => {
         <CardTags />
         <GroupCard />
         <RecommendedProducts />
-        {/* <SponsoredProducts />
-        <LatestDeals />*/}
+        <SponsoredProducts />
+        <LatestDeals />
+        <PromoBanner
+          bannerImage="promoBanner_sz4ppr.jpg"
+          bannerHeight="150px"
+        />
         <ProductBanner />
         <Popularcategory />
         <AdsBanner />

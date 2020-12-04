@@ -351,6 +351,17 @@
       "subcategory": "Gionee",
       "description": "",
       "tag": "Best Selling"
+    },
+    {
+      "id": 33,
+      "name": "Olubisi david 32\" LED TV",
+      "price": 158000,
+      "formerPrice": 172250,
+      "img": "samsung_32_led_dqwdno",
+      "category": "human",
+      "subcategory": "TV",
+      "tag": "latest deals",
+      "description": "A test using postman"
     }
   ],
   "users": []

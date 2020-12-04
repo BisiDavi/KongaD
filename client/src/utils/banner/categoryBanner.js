@@ -39,7 +39,7 @@ const CategoryBanner = () => {
           <div className={classes.Details}>
             <h3>{bData.category}</h3>
             <p>{bData.subcategory}</p>
-            <h5>SHOP NOW ></h5>
+            <h5>SHOP NOW &gt; </h5>
           </div>
         </Paper>
       ))}

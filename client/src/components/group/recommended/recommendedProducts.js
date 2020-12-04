@@ -7,6 +7,7 @@ import classes from "./recommendedProducts.module.css";
 const RecommendedProducts = props => {
   const products = [];
   const recommendedProductData = [];
+  let sixRecommendedProducts = [];
 
   useEffect(() => {
     props.dispatch(FetchProducts());
@@ -18,14 +19,14 @@ const RecommendedProducts = props => {
     });
     products.forEach(item => {
       if (item.tag.includes("Recommended Products")) {
-        return recommendedProductData.push(item);
+        recommendedProductData.push(item);
+        sixRecommendedProducts = [...recommendedProductData.slice(0, 6)];
+        return sixRecommendedProducts;
       }
     });
   };
 
   getRecommendedProducts();
-
-  console.log("Recommended Products", recommendedProductData);
 
   return (
     <section className={classes.RecommendedProducts}>
@@ -35,13 +36,13 @@ const RecommendedProducts = props => {
       </div>
       <hr />
       <div className={classes.dealcards}>
-        {recommendedProductData.map(rPData => {
+        {sixRecommendedProducts.map(rPData => {
           return (
             <ProductCard
               key={rPData.name}
               name={rPData.name}
               width="100%"
-              imgheight="50%"
+              imgheight="100%"
               price={rPData.price}
               formerPrice={rPData.formerPrice}
               imgsrc={`konga/${rPData.img}`}

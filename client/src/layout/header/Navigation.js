@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import { LazyLoadImage, ModalLogin } from "../../imports";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
 const useStyles = makeStyles(theme => ({

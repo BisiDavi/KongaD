@@ -22,7 +22,7 @@ const displaySlider = slidersPublicId.map(imageID => (
 ));
 
 const Slider = props => {
-  const { loading = true } = props;
+  // const { loading = true } = props;
 
   return (
     <Carousel

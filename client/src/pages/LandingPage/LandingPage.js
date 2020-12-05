@@ -16,7 +16,7 @@ import {
   RecommendedProducts,
   ProductBanner,
   Brandlogo,
-  SponsoredProducts,
+  // SponsoredProducts,
   BestSellingProducts
 } from "../../imports";
 
@@ -39,10 +39,12 @@ const LandingPage = () => {
         <RecommendedProducts />
         {/* <SponsoredProducts /> */}
         <LatestDeals />
-        <PromoBanner
-          bannerImage="promoBanner_sz4ppr.jpg"
-          bannerHeight="150px"
-        />
+        <span className={classes.promobanner}>
+          <PromoBanner
+            bannerImage="promoBanner_sz4ppr.jpg"
+            bannerHeight="150px"
+          />
+        </span>
         <ProductBanner />
         <Popularcategory />
         <AdsBanner />

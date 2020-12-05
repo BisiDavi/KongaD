@@ -16,8 +16,14 @@
 }
 
 @media (max-width: 768px) {
+  .Brandlogo div {
+    padding: 10px;
+  }
+  .Brandlogo {
+    height: 10rem;
+  }
   .Brandlogo img {
-    height: 20% !important;
-    width: 20% !important;
+    height: 30px !important;
+    width: 30px !important;
   }
 }

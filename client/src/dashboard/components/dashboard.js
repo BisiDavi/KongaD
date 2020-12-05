@@ -13,7 +13,7 @@ import {
   IconButton,
   Badge,
   Container,
-  Paper,
+  // Paper,
   Link,
   Box
 } from "@material-ui/core";
@@ -126,7 +126,7 @@ export default function MainDashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  // const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <Router>

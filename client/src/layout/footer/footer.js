@@ -12,10 +12,12 @@ const Footer = () => {
 
     const support = [
       {
+        icon: <i className="fa fa-envelope" aria-hidden="true"></i>,
         title: "EMAIL SUPPORT",
         description: "help@konga.com"
       },
       {
+        icon: <i className="fa fa-phone" aria-hidden="true"></i>,
         title: "PHONE SUPPORT",
         description:
           "0701 263 5700, 0809 060 5055"
@@ -27,20 +29,23 @@ const Footer = () => {
     }
     ];
 
-  const footerForm = () => (     
+  const footerForm = () => (
     <section className={classes.Support}>
-       {support.map(item => (
-         <div key={item.title}>
-           <h3>{item.title}</h3>
-           <p>{item.description}</p>
-         </div>
-       ))}
-       <form>
-         <input type="text" />
-         <button type="submit">Subscribe</button>
-       </form>
+      {support.map(item => (
+        <div key={item.title}>
+          <div className="icon">{item.icon}</div>
+          <div className="info">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        </div>
+      ))}
+      <form>
+        <input type="text" />
+        <button type="submit">Subscribe</button>
+      </form>
     </section>
-  )
+  );
 
   const FooterLinksHandler = (section) => {
     const siteHeader = section[0];

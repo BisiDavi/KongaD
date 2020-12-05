@@ -13,6 +13,10 @@
 
 @media (max-width: 768px) {
   .KongaCategory {
+    height: 100% !important;
+    width: 95% !important;
+  }
+  .KongaCategory div {
     display: none;
   }
 }

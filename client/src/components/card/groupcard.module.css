@@ -10,3 +10,15 @@
   margin: 20px 20px 40px 20px;
   font-size: 20px;
 }
+
+@media (max-width: 768px) {
+  .groupCard {
+    display: flex;
+    overflow-x: scroll;
+  }
+
+  .groupCard img {
+    width: 200px;
+    margin: 10px;
+  }
+}

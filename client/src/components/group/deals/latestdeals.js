@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { FetchProducts } from "../../../store/actions/productActions";
 import { ProductCard } from "../../../imports";
 import classes from "./latestdeals.module.css";
@@ -9,16 +9,15 @@ const LatestDeals = props => {
   const dealsData = [];
   let sixLatestDeals = [];
 
+  const dispatch = useDispatch();
   useEffect(() => {
-    props.dispatch(FetchProducts());
-  }, []);
-
+    dispatch(FetchProducts());
+  }, [dispatch]);
 
   const getLatestDeals = () => {
-    props.product.map(product => {
-      product.map(item => products.push(item));
-    });
-    products.forEach(item => {
+    props.product.map(product => product.map(item => products.push(item)));
+
+    return products.forEach(item => {
       if (item.tag.includes("latest deals")) {
         dealsData.push(item);
         sixLatestDeals = [...dealsData.slice(0, 6)];

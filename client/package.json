@@ -42,6 +42,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "startjsonserver": "json-server db.json --watch --port 5000",
     "build": "react-scripts build",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",

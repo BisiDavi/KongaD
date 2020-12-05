@@ -2,24 +2,24 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import {
   LandingPage,
-  BabyToys,
-  Computers,
-  Electronics,
-  Fashion,
-  HomeKitchen,
-  Phones,
-  WineOtherCategories,
+  // BabyToys,
+  // Computers,
+  // Electronics,
+  // Fashion,
+  // HomeKitchen,
+  // Phones,
+  // WineOtherCategories,
   UserRegister,
   UserLogin,
   Signin,
   Login,
   MainDashboard,
   ProductTable,
-  DashboardHome
+  // DashboardHome
 } from "../imports";
-import { navLinks } from "../components/navigation/Navbar";
+// import { navLinks } from "../components/navigation/Navbar";
 
-const navComponents = [
+/* const navComponents = [
   BabyToys,
   Computers,
   Electronics,
@@ -28,8 +28,9 @@ const navComponents = [
   Phones,
   WineOtherCategories
 ];
+ */
 
-const AppRoutes = () => {
+ const AppRoutes = () => {
   return (
     <>
       <Router>

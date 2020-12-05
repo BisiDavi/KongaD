@@ -7,9 +7,11 @@ import classes from "../group/deals/latestdeals.module.css";
 const LatestDeals = props => {
   const products = [];
   const dealsData = [];
-  let sixLatestDeals = []
+  let sixLatestDeals = [];
+  
+  const { dispatch } = props;
   useEffect(() => {
-    props.dispatch(FetchProducts());
+    dispatch(FetchProducts());
   }, []);
 
   console.log("PRODUCT", props.product);
@@ -22,7 +24,7 @@ const LatestDeals = props => {
       if (item.tag.includes("latest deals")) {
         dealsData.push(item);
         sixLatestDeals = [...dealsData.slice(0, 6)];
-        return sixLatestDeals
+        return sixLatestDeals;
       }
     });
   };

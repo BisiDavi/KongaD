@@ -3,15 +3,16 @@ import { connect, useDispatch } from "react-redux";
 import HorizontalScroller from "react-horizontal-scroll-container";
 import { ShowcaseCard } from "../../../imports";
 import classes from "./bestSelling.module.css";
+import { FetchProducts } from "../../../store/actions/productActions";
 
 const BestSellingProducts = props => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(FetchProducts());
   }, [dispatch]);
-  const products = [];
-  const bestSellingProductArray = [];
-  const getSixBestSellingProduct = [];
+  let products = [];
+  let bestSellingProductArray = [];
+  let getSixBestSellingProduct = [];
 
   const getBestSellingProducts = () => {
     props.bestSellingProduct.map(product =>

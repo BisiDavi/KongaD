@@ -1,9 +1,5 @@
-Navigation {
-  flex-grow: 1;
-}
-
 @media (max-width: 768px) {
-  .Navigation {
+  .PromoButton {
     display: none;
   }
 }

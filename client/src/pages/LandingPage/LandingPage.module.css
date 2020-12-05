@@ -6,8 +6,15 @@
   grid-gap: 10px;
 }
 
-.OtherSection{
-    background: #f2f2f2;
-    padding: 1px;
-    margin: -20px 0px;
+.OtherSection {
+  background: #f2f2f2;
+  padding: 1px;
+  margin: -20px 0px;
+}
+
+@media (max-width: 768px) {
+  .Section1 {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -9,3 +9,11 @@
   border-radius: 5px;
   height:193px;  
 }
+
+
+@media (max-width: 768px) {
+  .DealAdvertGif img {
+    height: 50% !important;
+    width: 50% !important;
+  }
+}

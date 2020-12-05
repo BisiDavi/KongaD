@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import {connect} from 'react-redux';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
 import HorizontalScroller from "react-horizontal-scroll-container";
 import { ShowcaseCard } from "../../../imports";
 import classes from "./bestSelling.module.css";
@@ -79,9 +79,9 @@ const BestSellingProducts = () => {
             <ShowcaseCard
               key={pdtData.name}
               imgsrc={`konga/${pdtData.img}`}
-              width="300px"              
-              height="400px"              
-              imgheight="200px"              
+              width="300px"
+              height="21rem"
+              imgheight="200px"
               name={pdtData.name}
               price={pdtData.price}
               formerPrice={pdtData.formerPrice}

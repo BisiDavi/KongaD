@@ -18,7 +18,7 @@ const HoverCard = props => {
       >
       {(showDetails) 
       ?(
-      <>
+      <span className={classes.ProductImg}>
         <LazyLoadImage
           publicId={props.imgsrc}
           width={props.width}
@@ -27,7 +27,7 @@ const HoverCard = props => {
         <span className={classes.Product_name}>
         <h3>{props.name}</h3>
         </span>
-      </>
+      </span>
       ) 
       :(<div className={classes.Showonhover}>
         <div className={classes.Header}>

@@ -4,7 +4,6 @@ import { Paper } from "@material-ui/core";
 
 const Branddetails = () => {
 
-
   return (
     <Paper className={classes.Branddetails}>
       <div className={classes.Details}>

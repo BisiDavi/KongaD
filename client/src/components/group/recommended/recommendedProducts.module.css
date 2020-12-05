@@ -20,3 +20,11 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);    
 }
+
+
+@media(max-width:768px){
+  .dealcards{
+    display: flex;
+    overflow-x:scroll;
+  }
+}

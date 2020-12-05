@@ -9,8 +9,8 @@ import {
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import { LazyLoadImage, ModalLogin } from "../../imports";
-// import classe
 import { Link } from "react-router-dom";
+import styles from "./Navigation.module.css";
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -139,7 +139,7 @@ function PrimarySearchAppBar(props) {
 
   const classes = useStyles();
   return (
-    <div className={classes.grow}>
+    <div className={styles.Navigation}>
       <AppBar className={classes.AppBar} position="static">
         <Toolbar>
           <LazyLoadImage

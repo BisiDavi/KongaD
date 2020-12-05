@@ -16,13 +16,18 @@ const ShowcaseCard = props => {
   const percent =
     100 - Math.floor(parseInt((props.price / props.formerPrice) * 100, 10));
 
-  const displayPercent = props.formerPrice ? `${percent} %` : null;
+  const displayPercent = props.formerPrice ? `${percent} % off` : null;
+
+  const noDiscount = "none";
+
+  const discount = props.formerPrice ? `${classes.percentage}` : noDiscount;
 
   return (
-    <Paper 
-    className={classes.ShowcaseCard} 
-    style={{ height:props.height, width:props.cardWidth }}>
-      <div className="percentage">{displayPercent}</div>
+    <Paper
+      className={classes.ShowcaseCard}
+      style={{ height: props.height, width: props.cardWidth }}
+    >
+      <div className={discount}>{displayPercent}</div>
       <LazyLoadImage
         width={props.width}
         height={props.imgheight}

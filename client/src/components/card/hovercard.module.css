@@ -8,7 +8,7 @@
   bottom: 10%;
   color: white;
   left: 0;
-    width: 100%;
+  width: 100%;
 }
 
 .Hovercard h3 {
@@ -47,4 +47,24 @@
 
 .body li {
   color: black;
+}
+
+@media (max-width: 768px) {
+  .body {
+    display: none;
+  }
+
+  .Header {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .Showonhover {
+    height: 50px;
+    background-color: white;
+  }
+
+  .ProductImg {
+    display: none;
+  }
 }

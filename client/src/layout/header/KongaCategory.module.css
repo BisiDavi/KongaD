@@ -3,10 +3,16 @@
   background: #f6f6f6;
   margin-top: -4px;
   height: 40px;
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
 }
 
 .Category {
   padding: 10px 25px;
+}
+
+@media (max-width: 768px) {
+  .KongaCategory {
+    display: none;
+  }
 }

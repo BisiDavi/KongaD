@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
+import styles from './PromoBanner.module.css';
 
 import { LazyLoadImage } from "../../imports";
 
@@ -41,6 +42,8 @@ const useStyles = makeStyles({
     borderRadius: "50%"
   }
 });
+
+
 //
 const PromoBanner = ({ bannerImage, bannerHeight }) => {
   const [showPromo, setShowPromo] = useState({
@@ -64,7 +67,7 @@ const PromoBanner = ({ bannerImage, bannerHeight }) => {
       : classes.cancelSidebarButton;
 
   return (
-    <div className="PromoButton">
+    <div className={styles.PromoButton}>
       <div className="position-relative">
         <button
           style={{ display: showPromo.button }}

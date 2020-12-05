@@ -3,16 +3,15 @@
   display: flex;
 }
 
-.Navbar div{
-   height: 40px;
-    margin-top: -10px;
+.Navbar div {
+  height: 40px;
+  margin-top: -10px;
 }
 
-.Navbar li:hover{
+.Navbar li:hover {
   background: white;
-  color: #94004f
+  color: #94004f;
 }
-
 
 .Navbar ul {
   display: flex;
@@ -24,7 +23,7 @@
   list-style: none;
   margin: 0px 15px;
   height: 30px;
-  padding: 10px 0px; 
+  padding: 10px 0px;
 }
 
 .Navbar a {
@@ -32,6 +31,12 @@
   text-decoration: none;
 }
 
-.Navbar a:hover{
-  color: #94004f
+.Navbar a:hover {
+  color: #94004f;
+}
+
+@media (max-width: 768px) {
+  .Navbar {
+    display: none;
+  }
 }

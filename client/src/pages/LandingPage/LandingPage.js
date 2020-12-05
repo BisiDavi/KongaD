@@ -37,7 +37,7 @@ const LandingPage = () => {
         <CardTags />
         <GroupCard />
         <RecommendedProducts />
-        <SponsoredProducts />
+        {/* <SponsoredProducts /> */}
         <LatestDeals />
         <PromoBanner
           bannerImage="promoBanner_sz4ppr.jpg"

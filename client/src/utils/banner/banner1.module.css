@@ -1,12 +1,25 @@
-.Banner{    
-    margin:20px;
+.Banner {
+  margin: 20px;
 }
 
-.Paper{
-    display: flex;
-    justify-content: space-between;
+.Paper {
+  display: flex;
+  justify-content: space-between;
 }
 
-.Paper div{
-    padding:5px;
+.Paper div {
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .ProductBanner {
+    display: none;
+  }
+
+  .Paper {
+    flex-direction: column;
+  }
+  .Paper img {
+    margin: 5px 3px;
+  }
 }
